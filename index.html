@@ -61,7 +61,7 @@
 <body
   class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
   <!-- BEGIN: TopNotificationStrip -->
-  <aside
+  <!-- <aside
     class="bg-deep-900 border-b border-brand-500/20 text-brand-200 text-[11px] uppercase tracking-wider py-1.5 px-4 text-center"
     data-purpose="legal-credentials-banner">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
@@ -74,11 +74,11 @@
       <span class="text-brand-400/40">|</span>
       <span class="">HOSPITAL &amp; HEALTHCARE INFRASTRUCTURE CONTRACTORS</span>
     </div>
-  </aside>
+  </aside> -->
   <!-- END: TopNotificationStrip -->
   <!-- BEGIN: MainHeader -->
   <header
-    class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-100 shadow-sm transition-all duration-300">
+    class="sticky top-0 z-50 bg-brand-950/90 backdrop-blur-md border-b border-brand-500/20 shadow-md transition-all duration-300">
     <div class="w-full px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Brand Logo -->
       <a class="flex items-center group" data-purpose="brand-link" href="#">
@@ -86,22 +86,22 @@
       </a>
       <!-- Desktop Navigation Menu -->
       <nav class="hidden lg:flex items-center space-x-8" data-purpose="desktop-nav">
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors"
+        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
           href="#about">About Us</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors"
+        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
           href="#philosophy">Our Philosophy</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors"
+        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
           href="#matrix">Services</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors"
+        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
           href="#projects">Projects</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors"
+        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
           href="#team">Our Team</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors"
+        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
           href="#contact">Contact Us</a>
       </nav>
       <!-- CTA Action Button -->
       <div class="flex items-center gap-3">
-        <a class="inline-flex items-center justify-center px-6 py-2.5 rounded-sm bg-brand-600 text-white text-xs font-semibold tracking-widest uppercase hover:bg-brand-700 transition-all duration-300 shadow-sm"
+        <a class="inline-flex items-center justify-center px-6 py-2.5 rounded-sm bg-brand-600 text-white text-xs font-semibold tracking-widest uppercase hover:bg-brand-500 transition-all duration-300 shadow-md border border-brand-400/30"
           data-purpose="header-cta" href="#contact">
           Contact Us
         </a>
@@ -112,13 +112,14 @@
   <main>
     <!-- BEGIN: HeroSection (Sunset Skyline Backdrop & Architectural Element) -->
     <section
-      class="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between bg-deep-950 text-white overflow-hidden"
+      class="relative min-h-[85vh] lg:min-h-screen flex flex-col justify-between bg-deep-950 text-white overflow-hidden"
       data-purpose="hero-section">
       <!-- Full-bleed background with atmospheric overlay -->
       <div class="absolute inset-0 z-0 overflow-hidden">
-        <img alt="City skyline sunset panorama" class="w-full h-full object-cover object-center" src="/hero-bg.jpg">
-        <!-- Deep gradient overlay for optimal readability -->
-        <div class="absolute inset-0 bg-gradient-to-r from-deep-950/90 via-deep-950/70 to-deep-900/40"></div>
+        <img alt="City skyline sunset panorama" class="w-full h-full object-cover object-center" src="/image.png">
+        <!-- Deep Blue gradient overlay fading from right to left for text contrast & visibility -->
+        <div class="absolute inset-0 bg-gradient-to-l from-deep-950/15 via-deep-950/10 via-50% to-transparent"></div>
+        <div class="absolute inset-0 bg-brand-950/20 mix-blend-multiply pointer-events-none"></div>
       </div>
       <!-- Top accreditation / discrete regulatory badge -->
       <div class="relative z-10 w-full px-6 lg:px-12 pt-6 flex justify-end text-right pointer-events-none">
@@ -128,41 +129,30 @@
           <span class="">PROMOTER: M/S CRESCENTCARE (AS MEDICAL INFRA PVT LTD)</span>
         </div>
       </div>
-      <!-- Main Hero Body with Left Copy & Right Building Element -->
-      <div
-        class="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-12 py-10 lg:py-16 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <!-- Left Text Content -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left space-y-6">
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-brand-500/20 border border-brand-400/40 text-brand-300 text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
-            <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
-            Hospital &amp; Healthcare Infrastructure
-          </div>
+      <!-- Main Hero Body with Right-aligned Content -->
+      <div class="relative z-10 px-10 w-full py-10 lg:py-16 flex-1 flex justify-end">
+        <!-- Right Text Content -->
+        <div class="flex flex-col relative z-10 items-end text-right space-y-6 pt-0 md:pt-20 max-w-2xl">
           <div class="space-y-3">
             <h1
-              class="font-sans text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white uppercase tracking-wide drop-shadow-lg">
+              class="font-sans text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white uppercase tracking-wide drop-shadow-2xl">
               WE BUILD <br />
               WHAT MATTERS.
             </h1>
-            <p class="text-sm sm:text-base text-slate-200 max-w-lg leading-relaxed font-light drop-shadow">
-              Turnkey healthcare infrastructure, civil superstructures, modular OTs, and clinical MEP systems engineered
-              for institutional longevity.
-            </p>
           </div>
-          <div class="pt-2 flex flex-wrap items-center gap-4">
-            <a class="px-8 py-3.5 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold tracking-wider uppercase transition-all duration-200 shadow-lg rounded-sm"
+          <div class="pt-2 flex flex-wrap items-center justify-end gap-4">
+            <a class="px-8 py-3.5 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold tracking-wider uppercase transition-all duration-200 shadow-lg rounded-sm border border-brand-400/30"
               href="#projects">
               View Projects
             </a>
-
           </div>
         </div>
-        <!-- Right Building Element -->
+        <!-- Building Superstructure Element -->
         <!-- <div
-          class="lg:col-span-5 flex justify-center lg:justify-end items-end relative h-full min-h-[320px] lg:min-h-[480px]">
-          <img alt="Modern healthcare & hospital building architecture"
-            class="max-h-[380px] sm:max-h-[480px] lg:max-h-[700px] w-auto object-contain object-bottom drop-shadow-[0_25px_35px_rgba(0,0,0,0.6)] filter brightness-[1.02]"
-            src="/hero-building.png">
+          class="lg:col-span-5 hidden md:flex justify-center lg:justify-end items-end absolute -right-40 h-full min-h-[340px] lg:min-h-[600px] z-5">
+          <img alt="Modern healthcare & hospital skyscraper superstructures"
+            class="max-h-[400px] sm:max-h-[500px] lg:max-h-[600px] w-auto object-contain object-bottom drop-shadow-[0_25px_40px_rgba(0,0,0,0.85)] filter brightness-[1.04] contrast-[1.06]"
+            src="/hero-towers.png">
         </div> -->
       </div>
       <!-- Bottom Metrics Strip in Sky Blue & Navy Clean Palette -->
@@ -374,7 +364,7 @@
     </section>
     <!-- END: PhilosophySection -->
     <!-- BEGIN: TimelineSection -->
-    <section class="py-20 bg-white border-b border-brand-100 relative" data-purpose="institutional-timeline"
+    <!-- <section class="py-20 bg-white border-b border-brand-100 relative" data-purpose="institutional-timeline"
       id="philosophy">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-12">
@@ -388,7 +378,7 @@
           <div class="w-12 h-1 bg-brand-500 mx-auto mt-3"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <!-- 2014 -->
+        
           <div class="border border-brand-100 p-6 bg-brand-50/30 rounded-sm hover:border-brand-300 transition-all">
             <span class="font-cinzel text-3xl font-bold text-brand-600 block mb-2">2014</span>
             <div class="w-6 h-0.5 bg-brand-500 mb-3"></div>
@@ -398,7 +388,7 @@
               structures.
             </p>
           </div>
-          <!-- 2018 -->
+      
           <div class="border border-brand-100 p-6 bg-brand-50/30 rounded-sm hover:border-brand-300 transition-all">
             <span class="font-cinzel text-3xl font-bold text-brand-600 block mb-2">2018</span>
             <div class="w-6 h-0.5 bg-brand-500 mb-3"></div>
@@ -407,7 +397,7 @@
               Specialized into hospital construction, modular operation theatres, and sterile cleanrooms.
             </p>
           </div>
-          <!-- 2021 -->
+        
           <div class="border border-brand-100 p-6 bg-brand-50/30 rounded-sm hover:border-brand-300 transition-all">
             <span class="font-cinzel text-3xl font-bold text-brand-600 block mb-2">2021</span>
             <div class="w-6 h-0.5 bg-brand-500 mb-3"></div>
@@ -416,7 +406,7 @@
               Added Medical Gas Pipeline Systems (MGPS) and specialized hospital HVAC with HEPA filtration.
             </p>
           </div>
-          <!-- TODAY -->
+    
           <div class="border border-brand-300 p-6 bg-brand-50 rounded-sm shadow-sm">
             <span class="font-cinzel text-3xl font-bold text-brand-700 block mb-2">Today</span>
             <div class="w-6 h-0.5 bg-brand-600 mb-3"></div>
@@ -428,7 +418,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- END: TimelineSection -->
     <!-- BEGIN: InfrastructureMatrixSection (Capabilities in Clean Sky Blue & White) -->
     <section class="py-20 bg-slate-50 relative" data-purpose="services-matrix" id="matrix">
