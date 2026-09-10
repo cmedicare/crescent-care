@@ -10,10 +10,12 @@
   <link rel="shortcut icon" href="/logo.ico">
   <!-- Tailwind CSS v3 with Plugins -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Kanit (Body) & Georama (Headings) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -38,8 +40,13 @@
             }
           },
           fontFamily: {
-            sans: ['"Georama"', 'sans-serif'],
-            display: ['"Georama"', 'sans-serif'],
+            sans: ['Kanit', 'sans-serif'],
+            body: ['Kanit', 'sans-serif'],
+            heading: ['"Integral CF"', 'Integral', 'Georama', 'sans-serif'],
+            display: ['"Integral CF"', 'Integral', 'Georama', 'sans-serif'],
+            integral: ['"Integral CF"', 'Integral', 'sans-serif'],
+            georama: ['Georama', 'sans-serif'],
+            kanit: ['Kanit', 'sans-serif'],
           },
           letterSpacing: {
             'ultra-wide': '0.22em',
@@ -50,64 +57,110 @@
     }
   </script>
   <style data-purpose="custom-typography">
-    .font-cinzel,
-    .font-georama {
-      font-family: 'Georama', sans-serif;
+    @font-face {
+      font-family: 'Integral CF';
+      src: url('integral.ttf') format('truetype'),
+        url('./integral.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
     }
+
+    @font-face {
+      font-family: 'Integral';
+      src: url('integral.ttf') format('truetype'),
+        url('./integral.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
     body {
-      font-family: 'Georama', sans-serif;
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(75deg,
+          #986548 0%,
+          #d6a986 45%,
+          #b18a73 65%,
+          #725247 100%);
+
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .font-integral {
+      font-family: 'Integral CF', 'Integral', sans-serif !important;
+    }
+
+    .font-georama {
+      font-family: 'Georama', sans-serif !important;
+    }
+
+    .font-heading {
+      font-family: 'Integral CF', 'Integral', 'Georama', sans-serif !important;
+    }
+
+    .font-kanit {
+      font-family: 'Kanit', sans-serif !important;
+    }
+
+    .btn-tilted {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transform: skewX(-14deg);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-tilted>span,
+    .btn-tilted>div {
+      transform: skewX(14deg);
+      display: inline-block;
+    }
+
+    .btn-tilted:hover {
+      transform: skewX(-14deg) translateY(-2px);
+    }
+
+    .btn-tilted:active {
+      transform: skewX(-14deg) translateY(0);
     }
   </style>
 </head>
 
-<body
-  class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
-  <!-- BEGIN: TopNotificationStrip -->
-  <!-- <aside
-    class="bg-deep-900 border-b border-brand-500/20 text-brand-200 text-[11px] uppercase tracking-wider py-1.5 px-4 text-center"
-    data-purpose="legal-credentials-banner">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
-      <span class="inline-flex items-center gap-1.5 font-medium text-white">
-        <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
-        M/S CRESCENTCARE (AS MEDICAL INFRA PVT LTD)
-      </span>
-      <span class="text-brand-400/40">|</span>
-      <span class="">ESTD. 2014 • NEW DELHI</span>
-      <span class="text-brand-400/40">|</span>
-      <span class="">HOSPITAL &amp; HEALTHCARE INFRASTRUCTURE CONTRACTORS</span>
-    </div>
-  </aside> -->
-  <!-- END: TopNotificationStrip -->
+<body class="text-white font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
   <!-- BEGIN: MainHeader -->
   <header
-    class="sticky top-0 z-50 bg-brand-950/90 backdrop-blur-md border-b border-brand-500/20 shadow-md transition-all duration-300">
+    class="sticky top-0 z-50 bg-brand-600 backdrop-blur-md border-b border-white/20 shadow-2xl shadow-brand-800 transition-all duration-300">
     <div class="w-full px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Brand Title -->
       <a class="flex items-center group" data-purpose="brand-link" href="#">
-        <span class="font-bold text-xl sm:text-2xl tracking-wider text-white uppercase group-hover:text-brand-400 transition-colors">
+        <span
+          class="font-bold text-xl sm:text-2xl tracking-wider text-white uppercase group-hover:text-amber-200 transition-colors drop-shadow-sm">
           CRESCENT CARE
         </span>
       </a>
       <!-- Desktop Navigation Menu -->
       <nav class="hidden lg:flex items-center space-x-8" data-purpose="desktop-nav">
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
-          href="#about">About Us</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
-          href="#philosophy">Our Philosophy</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
+        <a class="text-xs  uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="#about">About
+          Us</a>
+        <a class="text-xs  uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="#philosophy-statement">Our Philosophy</a>
+        <a class="text-xs  uppercase tracking-widest text-white font-light hover:text-white transition-colors"
           href="#matrix">Services</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
+        <a class="text-xs   uppercase tracking-widest text-white font-light hover:text-white transition-colors"
           href="#projects">Projects</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
-          href="#team">Our Team</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-brand-400 transition-colors"
+        <a class="text-xs  uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="#team">Our
+          Team</a>
+        <a class="text-xs  uppercase tracking-widest text-white font-light hover:text-white transition-colors"
           href="#contact">Contact Us</a>
       </nav>
       <!-- CTA Action Button -->
       <div class="flex items-center gap-3">
-        <a class="inline-flex items-center justify-center px-6 py-2.5 rounded-sm bg-brand-600 text-white text-xs font-semibold tracking-widest uppercase hover:bg-brand-500 transition-all duration-300 shadow-md border border-brand-400/30"
+        <a class="btn-tilted px-6 py-2.5 bg-white hover:bg-[#3f2011] text-brand-600 font-semibold text-xs   tracking-widest uppercase transition-all duration-300 shadow-md border border-white/30"
           data-purpose="header-cta" href="#contact">
-          Contact Us
+          <span>Enquiry Now</span>
         </a>
       </div>
     </div>
@@ -116,82 +169,74 @@
   <main>
     <!-- BEGIN: HeroSection (Sunset Skyline Backdrop & Architectural Element) -->
     <section
-      class="relative min-h-[85vh] lg:min-h-screen flex flex-col justify-between bg-deep-950 text-white overflow-hidden"
+      class="relative min-h-[85vh] lg:min-h-screen flex flex-col justify-between bg-transparent text-white overflow-hidden"
       data-purpose="hero-section">
       <!-- Full-bleed background with atmospheric overlay -->
       <div class="absolute inset-0 z-0 overflow-hidden">
         <img alt="City skyline sunset panorama" class="w-full h-full object-cover object-top" src="/image.png">
-        <!-- Deep Blue gradient overlay fading from right to left for text contrast & visibility -->
-        <div class="absolute inset-0 bg-gradient-to-l from-deep-950/15 via-deep-950/10 via-50% to-transparent"></div>
-        <div class="absolute inset-0 bg-brand-950/20 mix-blend-multiply pointer-events-none"></div>
+        <!-- Warm Bronze gradient overlay matching the image gradient without going black -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#8a563d]/65 via-[#8a563d]/45 via-30% to-transparent"></div>
+        <div class="absolute inset-0 bg-[#7c4c35]/20 mix-blend-multiply pointer-events-none"></div>
       </div>
       <!-- Top accreditation / discrete regulatory badge -->
       <div class="relative z-10 w-full px-6 lg:px-12 pt-6 flex justify-end text-right pointer-events-none">
         <div
-          class="text-[9px] uppercase tracking-widest text-slate-200 leading-relaxed font-sans font-medium drop-shadow">
+          class="text-[9px] uppercase tracking-widest text-amber-50 leading-relaxed font-sans font-medium drop-shadow">
           <span class="">REGISTRATION NO.: CC/MED/ND/2024/09 DATED 08.04.2024</span><br>
           <span class="">PROMOTER: M/S CRESCENTCARE (AS MEDICAL INFRA PVT LTD)</span>
         </div>
       </div>
       <!-- Main Hero Body with Right-aligned Content -->
-      <div class="relative z-10 px-10 w-full py-10 lg:py-16 flex-1 flex justify-end">
+      <div class="relative z-10 px-10 text-center w-full py-10 lg:py-16 flex-1 flex justify-end">
         <!-- Right Text Content -->
-        <div class="flex flex-col relative z-10 items-end text-right space-y-6 pt-0 md:pt-20 max-w-2xl">
+        <div class="flex flex-col relative z-10 items-end text-center space-y-6 pt-0 md:pt-20 max-w-2xl">
           <div class="space-y-3">
             <h1
-              class="font-sans text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white uppercase tracking-wide drop-shadow-2xl">
+              class="font-georama font-semibold text-4xl sm:text-5xl lg:text-7xl leading-tighter text-white uppercase tracking-wide drop-shadow-2xl">
               WE BUILD <br />
               WHAT MATTERS.
             </h1>
           </div>
-          <div class="pt-2 flex flex-wrap items-center justify-end gap-4">
-            <a class="px-8 py-3.5 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold tracking-wider uppercase transition-all duration-200 shadow-lg rounded-sm border border-brand-400/30"
+          <div class="pt-2 flex flex-wrap items-center justify-center gap-4 mx-auto">
+            <a class="btn-tilted px-8 py-3.5 bg-brand-600 hover:bg-[#3f2011] text-white text-xs tracking-wider uppercase transition-all duration-200 shadow-lg border border-white/30"
               href="#projects">
-              View Projects
+              <span>EXPLORE PROJECT</span>
             </a>
           </div>
         </div>
-        <!-- Building Superstructure Element -->
-        <!-- <div
-          class="lg:col-span-5 hidden md:flex justify-center lg:justify-end items-end absolute -right-40 h-full min-h-[340px] lg:min-h-[600px] z-5">
-          <img alt="Modern healthcare & hospital skyscraper superstructures"
-            class="max-h-[400px] sm:max-h-[500px] lg:max-h-[600px] w-auto object-contain object-bottom drop-shadow-[0_25px_40px_rgba(0,0,0,0.85)] filter brightness-[1.04] contrast-[1.06]"
-            src="/hero-towers.png">
-        </div> -->
       </div>
-      <!-- Bottom Metrics Strip in Sky Blue & Navy Clean Palette -->
-      <div class="relative z-10 w-full border-t border-brand-500/20 bg-deep-950/80 backdrop-blur-md">
+      <!-- Bottom Metrics Strip in Warm Bronze Palette -->
+      <div class="relative z-10 w-full border-t border-white/20 bg-[#74452f]/70 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div
-            class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800 text-slate-200">
+            class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center divide-y md:divide-y-0 md:divide-x divide-white/20 text-amber-50">
             <div class="pt-2 md:pt-0">
               <span class="block text-xs uppercase tracking-wider font-bold text-white">10+ Years</span>
-              <span class="text-[10px] text-brand-300 tracking-wider uppercase">Experience</span>
+              <span class="text-[10px] text-amber-100 tracking-wider uppercase">Experience</span>
             </div>
             <div class="pt-2 md:pt-0">
               <span class="block text-xs uppercase tracking-wider font-bold text-white">₹14 CR+</span>
-              <span class="text-[10px] text-brand-300 tracking-wider uppercase">Kala Hospital</span>
+              <span class="text-[10px] text-amber-100 tracking-wider uppercase">Kala Hospital</span>
             </div>
             <div class="pt-2 md:pt-0">
               <span class="block text-xs uppercase tracking-wider font-bold text-white">15+ Modular OTs</span>
-              <span class="text-[10px] text-brand-300 tracking-wider uppercase">Operating Theatres Built</span>
+              <span class="text-[10px] text-amber-100 tracking-wider uppercase">Operating Theatres Built</span>
             </div>
             <div class="pt-2 md:pt-0">
               <span class="block text-xs uppercase tracking-wider font-bold text-white">6,500 SQ. M</span>
-              <span class="text-[10px] text-brand-300 tracking-wider uppercase">Hospital Area Handled</span>
+              <span class="text-[10px] text-amber-100 tracking-wider uppercase">Hospital Area Handled</span>
             </div>
             <div class="pt-2 md:pt-0">
               <span class="block text-xs uppercase tracking-wider font-bold text-white">Seismic Zone IV/V</span>
-              <span class="text-[10px] text-brand-300 tracking-wider uppercase">Structural Compliance</span>
+              <span class="text-[10px] text-amber-100 tracking-wider uppercase">Structural Compliance</span>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- END: HeroSection -->
-    <!-- BEGIN: LegacyLeadershipHeroSection (Sky Blue & White Luxury Theme) -->
-    <section
-      class="py-16 sm:py-20 lg:py-24 text-white relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-600"
+    <!-- BEGIN: LegacyLeadershipHeroSection (Matches Reference Image Satin Copper/Bronze Gradient) -->
+    <section class="py-16 sm:py-20 lg:py-28 text-white relative overflow-hidden border-b border-white/20"
       data-purpose="legacy-leadership-section" id="legacy">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -199,32 +244,32 @@
           <div class="lg:col-span-5 flex flex-col">
             <!-- Blank Rectangle Placeholder for Founder -->
             <div
-              class="w-full h-[460px] sm:h-[500px] lg:h-[540px] bg-brand-950/40 border-2 border-dashed border-brand-200/40 rounded-sm flex flex-col items-center justify-center text-brand-100 shadow-2xl backdrop-blur-sm p-6 text-center">
-
+              class="w-full h-[460px] sm:h-[500px] lg:h-[540px] bg-brand-600 border-2 border-dashed border-white/40 rounded-sm flex flex-col items-center justify-center text-amber-50 shadow-2xl backdrop-blur-sm p-6 text-center">
             </div>
-            <!-- Framed Quote Box -->
-            <div class="mt-4 p-5 sm:p-6 bg-brand-950/80 border-l-4 border-white shadow-xl backdrop-blur-md">
-              <p
-                class="font-cinzel text-xs sm:text-sm font-semibold tracking-wide text-white leading-relaxed uppercase">
+            <!-- Framed Quote Box Matching Reference Image -->
+            <div
+              class="mt-4 p-5 sm:p-6 bg-brand-600/85 border border-white/25 border-l-4 border-l-white shadow-2xl backdrop-blur-md">
+              <p class="font-heading text-xs sm:text-sm   tracking-wider text-white leading-relaxed uppercase">
                 "WE DO NOT JUST BUILD STRUCTURES; WE BUILD LIFELINES FOR GENERATIONS OF HEALING."
               </p>
-              <span class="block mt-2.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-brand-200">
-                — Mr. Prithvi Singh, MANAGING DIRECTOR
+              <span
+                class="block mt-2.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-super-wide text-amber-100">
+                — MR. PRITHVI SINGH, MANAGING DIRECTOR
               </span>
             </div>
           </div>
           <!-- Right Column: Narrative Copy & CTA -->
-          <div class="lg:col-span-7 flex flex-col justify-center space-y-6 sm:space-y-8 lg:pl-4">
+          <div class="lg:col-span-7 flex flex-col justify-center space-y-6 sm:space-y-8 lg:pl-6">
             <div class="space-y-3">
               <h2
-                class="font-cinzel text-2xl sm:text-3xl lg:text-5xl font-bold uppercase tracking-wider text-white leading-tight">
+                class="font-heading text-3xl sm:text-4xl lg:text-6xl font-bold uppercase tracking-wider text-white leading-tight drop-shadow-md">
                 UNVEILING A LEGACY.
               </h2>
             </div>
             <!-- Narrative copy -->
-            <div class="space-y-5 text-xs sm:text-sm lg:text-base leading-relaxed text-brand-50/95 font-light">
+            <div class="space-y-5 text-xs sm:text-sm lg:text-base leading-relaxed text-amber-50 font-light">
               <p>
-                Led by <strong class="font-semibold text-white">Mr. Prithvi Singh</strong>, who has achieved excellent
+                Led by <strong class="  text-white">Mr. Prithvi Singh</strong>, who has achieved excellent
                 exposure of 12 years in civil engineering services by providing complete client satisfaction.
               </p>
               <p>
@@ -239,11 +284,11 @@
                 Designing, and Laying Services.
               </p>
             </div>
-            <!-- Legacy Action Button -->
+            <!-- Legacy Action Button Matching Reference Image -->
             <div class="pt-2 sm:pt-4">
-              <a class="inline-block px-8 sm:px-10 py-3.5 sm:py-4 bg-white hover:bg-brand-50 text-brand-900 text-xs font-bold uppercase tracking-super-wide transition-all duration-300 shadow-xl border border-white/20"
+              <a class="btn-tilted px-8 sm:px-10 py-3.5 sm:py-4 bg-brand-600 hover:bg-[#3f2011] text-white text-xs font-bold uppercase tracking-super-wide transition-all duration-300 shadow-2xl border border-white/30"
                 href="#projects">
-                DISCOVER THE CRESCENT LEGACY
+                <span>DISCOVER THE CRESCENT LEGACY</span>
               </a>
             </div>
           </div>
@@ -251,21 +296,21 @@
       </div>
     </section>
     <!-- END: LegacyLeadershipHeroSection -->
-    <!-- BEGIN: AboutUsSection -->
-    <section class="py-20 lg:py-24 bg-white border-b border-brand-100" data-purpose="about-section" id="about">
+    <!-- BEGIN: AboutUsSection (Warm Bronze Luxury Theme) -->
+    <section class="py-20 lg:py-24 text-white border-b border-white/20 relative" data-purpose="about-section"
+      id="about">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div class="max-w-4xl mx-auto space-y-8">
           <div class="text-center space-y-3">
-            <span class="text-xs uppercase font-bold tracking-wider text-brand-600 block">Established 2014 • New
+            <span class="text-xs uppercase font-bold tracking-wider text-amber-100 block">Established 2014 • New
               Delhi</span>
-            <h2
-              class="font-cinzel text-2xl sm:text-3xl lg:text-4xl font-semibold uppercase text-slate-900 leading-tight">
+            <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl   uppercase text-white leading-tight">
               About Crescent Care
             </h2>
-            <div class="w-12 h-1 bg-brand-500 mx-auto"></div>
+            <div class="w-12 h-1 bg-white/60 mx-auto"></div>
           </div>
           <!-- Plain factual paragraphs -->
-          <div class="space-y-4 text-xs sm:text-sm leading-relaxed text-slate-700 text-center sm:text-left">
+          <div class="space-y-4 text-xs sm:text-sm leading-relaxed text-amber-50 text-center sm:text-left font-light">
             <p class="">
               Crescent Care (registered as AS Medical Infra Pvt Ltd) is a healthcare and hospital construction company
               established in 2014 in New Delhi. We specialize in civil construction, modular operation theatres, and
@@ -280,66 +325,67 @@
               College, Akhand Jyoti Eye Hospital, and various private multi-speciality hospitals.
             </p>
           </div>
-          <!-- Metrics Row in Soft Sky Blue -->
-          <div class="pt-4 border-t border-brand-100 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div class="p-3 bg-brand-50/50 border border-brand-100 rounded-sm text-center">
-              <span class="font-cinzel text-xl sm:text-2xl font-bold text-brand-700 block">2014</span>
-              <span class="text-[10px] uppercase tracking-wider text-slate-600">Year Founded</span>
+          <!-- Metrics Row in Soft Bronze Card -->
+          <div class="pt-4 border-t border-white/20 grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="p-3 bg-[#74452e]/50 border border-white/25 rounded-sm text-center shadow-md backdrop-blur-sm">
+              <span class="font-heading text-xl sm:text-2xl font-bold text-white block">2014</span>
+              <span class="text-[10px] uppercase tracking-wider text-amber-100">Year Founded</span>
             </div>
-            <div class="p-3 bg-brand-50/50 border border-brand-100 rounded-sm text-center">
-              <span class="font-cinzel text-xl sm:text-2xl font-bold text-brand-700 block">₹14 CR</span>
-              <span class="text-[10px] uppercase tracking-wider text-slate-600">Kala Hospital</span>
+            <div class="p-3 bg-[#74452e]/50 border border-white/25 rounded-sm text-center shadow-md backdrop-blur-sm">
+              <span class="font-heading text-xl sm:text-2xl font-bold text-white block">₹14 CR</span>
+              <span class="text-[10px] uppercase tracking-wider text-amber-100">Kala Hospital</span>
             </div>
-            <div class="p-3 bg-brand-50/50 border border-brand-100 rounded-sm text-center">
-              <span class="font-cinzel text-xl sm:text-2xl font-bold text-brand-700 block">₹16 CR</span>
-              <span class="text-[10px] uppercase tracking-wider text-slate-600">AIIMS Awantipora</span>
+            <div class="p-3 bg-[#74452e]/50 border border-white/25 rounded-sm text-center shadow-md backdrop-blur-sm">
+              <span class="font-heading text-xl sm:text-2xl font-bold text-white block">₹16 CR</span>
+              <span class="text-[10px] uppercase tracking-wider text-amber-100">AIIMS Awantipora</span>
             </div>
-            <div class="p-3 bg-brand-50/50 border border-brand-100 rounded-sm text-center">
-              <span class="font-cinzel text-xl sm:text-2xl font-bold text-brand-700 block">75+ Beds</span>
-              <span class="text-[10px] uppercase tracking-wider text-slate-600">SH Hospital</span>
+            <div class="p-3 bg-[#74452e]/50 border border-white/25 rounded-sm text-center shadow-md backdrop-blur-sm">
+              <span class="font-heading text-xl sm:text-2xl font-bold text-white block">75+ Beds</span>
+              <span class="text-[10px] uppercase tracking-wider text-amber-100">SH Hospital</span>
             </div>
           </div>
           <!-- Plain Clean Button -->
           <div class="pt-2 text-center">
-            <a class="inline-block px-8 py-3 bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold tracking-wider uppercase transition-all duration-200 rounded-sm shadow-sm"
+            <a class="btn-tilted px-8 py-3 bg-brand-600 hover:bg-[#3f2011] text-white text-xs   tracking-wider uppercase transition-all duration-200 rounded-sm shadow-md border border-white/30"
               href="#matrix">
-              View Our Services
+              <span>View Our Services</span>
             </a>
           </div>
         </div>
       </div>
     </section>
-    <!-- BEGIN: PhilosophySection (Exact Verbatim Statement in Sky Blue Card) -->
-    <section class="py-20 bg-brand-50/40 border-b border-brand-100 relative" data-purpose="corporate-philosophy"
+    <!-- BEGIN: PhilosophySection (Warm Bronze Luxury Theme) -->
+    <section class="py-20 text-white border-b border-white/20 relative" data-purpose="corporate-philosophy"
       id="philosophy-statement">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-10">
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-600 block mb-1">Our Policy</span>
-          <h2 class="font-cinzel text-2xl sm:text-3xl text-slate-900 font-semibold uppercase tracking-wide">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-100 block mb-1">Our Policy</span>
+          <h2 class="font-heading text-2xl sm:text-3xl text-white   uppercase tracking-wide">
             Our Quality Philosophy
           </h2>
-          <div class="w-12 h-1 bg-brand-500 mx-auto mt-3"></div>
+          <div class="w-12 h-1 bg-white/60 mx-auto mt-3"></div>
         </div>
-        <!-- Central Statement Card in Pure White with Crisp Sky Blue Border -->
-        <div class="max-w-4xl mx-auto bg-white border border-brand-200 shadow-sm rounded-sm p-8 sm:p-12 relative">
+        <!-- Central Statement Card in Frosted Warm Luxury Backdrop -->
+        <div
+          class="max-w-4xl mx-auto bg-[#683d26]/70 border border-white/30 shadow-2xl rounded-sm p-8 sm:p-12 relative backdrop-blur-md">
           <div class="space-y-4">
-            <p class="text-sm sm:text-base text-slate-900 leading-relaxed font-medium">
+            <p class="text-sm sm:text-base text-amber-50 leading-relaxed font-medium">
               "We use high quality raw material throughout our service in every field as we are one of the renowned
               quality centric organization and quality is our prior aim."
             </p>
-            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            <p class="text-xs sm:text-sm text-amber-100/90 leading-relaxed font-light">
               "We procure the raw material from quality driven organization that is checked at our quality inspection
               unit as to provide unique quality service to our esteemed clients. We offer these services after complete
               planning and designing of the project. We use latest and high performance machinery &amp; equipment in our
               services. We provide these services in various parts of the country to make a permanent relationship with
               our esteemed clients."
             </p>
-            <div class="pt-4 flex items-center justify-between flex-wrap gap-3 border-t border-brand-100">
-              <span class="text-xs font-semibold text-brand-700 uppercase tracking-wider">
+            <div class="pt-4 flex items-center justify-between flex-wrap gap-3 border-t border-white/20">
+              <span class="text-xs   text-white uppercase tracking-wider">
                 Quality Commitment • Crescent Care
               </span>
-              <span class="text-xs text-slate-500">
+              <span class="text-xs text-amber-100/80">
                 AS Medical Infra Pvt Ltd
               </span>
             </div>
@@ -347,344 +393,286 @@
         </div>
         <!-- Simple Highlights Row -->
         <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
-          <div class="bg-white p-3 text-center border border-brand-100 rounded-sm">
-            <span class="block text-xs font-bold text-slate-800">Quality Inspection</span>
-            <span class="text-[10px] text-slate-500">Material verification</span>
+          <div class="bg-[#74452e]/50 p-3 text-center border border-white/25 rounded-sm shadow-md backdrop-blur-sm">
+            <span class="block text-xs font-bold text-white">Quality Inspection</span>
+            <span class="text-[10px] text-amber-100">Material verification</span>
           </div>
-          <div class="bg-white p-3 text-center border border-brand-100 rounded-sm">
-            <span class="block text-xs font-bold text-slate-800">Standard Materials</span>
-            <span class="text-[10px] text-slate-500">Certified vendors</span>
+          <div class="bg-[#74452e]/50 p-3 text-center border border-white/25 rounded-sm shadow-md backdrop-blur-sm">
+            <span class="block text-xs font-bold text-white">Standard Materials</span>
+            <span class="text-[10px] text-amber-100">Certified vendors</span>
           </div>
-          <div class="bg-white p-3 text-center border border-brand-100 rounded-sm">
-            <span class="block text-xs font-bold text-slate-800">Project Planning</span>
-            <span class="text-[10px] text-slate-500">Design to execution</span>
+          <div class="bg-[#74452e]/50 p-3 text-center border border-white/25 rounded-sm shadow-md backdrop-blur-sm">
+            <span class="block text-xs font-bold text-white">Project Planning</span>
+            <span class="text-[10px] text-amber-100">Design to execution</span>
           </div>
-          <div class="bg-white p-3 text-center border border-brand-100 rounded-sm">
-            <span class="block text-xs font-bold text-slate-800">Pan-India Work</span>
-            <span class="text-[10px] text-slate-500">Across multiple states</span>
+          <div class="bg-[#74452e]/50 p-3 text-center border border-white/25 rounded-sm shadow-md backdrop-blur-sm">
+            <span class="block text-xs font-bold text-white">Pan-India Work</span>
+            <span class="text-[10px] text-amber-100">Across multiple states</span>
           </div>
         </div>
       </div>
     </section>
     <!-- END: PhilosophySection -->
-    <!-- BEGIN: TimelineSection -->
-    <!-- <section class="py-20 bg-white border-b border-brand-100 relative" data-purpose="institutional-timeline"
-      id="philosophy">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-600 block mb-1">Company History</span>
-          <h2 class="font-cinzel text-2xl sm:text-3xl text-slate-900 font-semibold uppercase tracking-wide">
-            Growth Timeline
-          </h2>
-          <p class="text-xs text-slate-600 mt-2">
-            Milestones in our healthcare construction journey since 2014.
-          </p>
-          <div class="w-12 h-1 bg-brand-500 mx-auto mt-3"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        
-          <div class="border border-brand-100 p-6 bg-brand-50/30 rounded-sm hover:border-brand-300 transition-all">
-            <span class="font-cinzel text-3xl font-bold text-brand-600 block mb-2">2014</span>
-            <div class="w-6 h-0.5 bg-brand-500 mb-3"></div>
-            <h4 class="font-bold text-sm text-slate-900 uppercase tracking-wide mb-1">Founded in Delhi</h4>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Started operations as AS Medical Infra Pvt Ltd, focusing on hospital civil construction and commercial
-              structures.
-            </p>
-          </div>
-      
-          <div class="border border-brand-100 p-6 bg-brand-50/30 rounded-sm hover:border-brand-300 transition-all">
-            <span class="font-cinzel text-3xl font-bold text-brand-600 block mb-2">2018</span>
-            <div class="w-6 h-0.5 bg-brand-500 mb-3"></div>
-            <h4 class="font-bold text-sm text-slate-900 uppercase tracking-wide mb-1">Healthcare Focus</h4>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Specialized into hospital construction, modular operation theatres, and sterile cleanrooms.
-            </p>
-          </div>
-        
-          <div class="border border-brand-100 p-6 bg-brand-50/30 rounded-sm hover:border-brand-300 transition-all">
-            <span class="font-cinzel text-3xl font-bold text-brand-600 block mb-2">2021</span>
-            <div class="w-6 h-0.5 bg-brand-500 mb-3"></div>
-            <h4 class="font-bold text-sm text-slate-900 uppercase tracking-wide mb-1">MEP &amp; Gas Pipelines</h4>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Added Medical Gas Pipeline Systems (MGPS) and specialized hospital HVAC with HEPA filtration.
-            </p>
-          </div>
-    
-          <div class="border border-brand-300 p-6 bg-brand-50 rounded-sm shadow-sm">
-            <span class="font-cinzel text-3xl font-bold text-brand-700 block mb-2">Today</span>
-            <div class="w-6 h-0.5 bg-brand-600 mb-3"></div>
-            <h4 class="font-bold text-sm text-slate-900 uppercase tracking-wide mb-1">Turnkey Hospital Builder</h4>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Handling multi-crore turnkey projects for medical colleges, government institutions, and private
-              hospitals.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- END: TimelineSection -->
-    <!-- BEGIN: InfrastructureMatrixSection (Capabilities in Clean Sky Blue & White) -->
-    <section class="py-20 bg-slate-50 relative" data-purpose="services-matrix" id="matrix">
+    <!-- BEGIN: InfrastructureMatrixSection (Capabilities in Warm Bronze Luxury Theme) -->
+    <section class="py-20 text-white relative border-b border-white/20" data-purpose="services-matrix" id="matrix">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-14">
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-600 block mb-1">Our Services</span>
-          <h2 class="font-cinzel text-2xl sm:text-3xl text-slate-900 font-semibold tracking-wide uppercase">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-100 block mb-1">Our Services</span>
+          <h2 class="font-heading text-2xl sm:text-3xl text-white   tracking-wide uppercase">
             Construction Capabilities
           </h2>
-          <p class="text-xs sm:text-sm text-slate-600 mt-2">
+          <p class="text-xs sm:text-sm text-amber-100/90 mt-2 font-light">
             Complete hospital construction services from civil work to clinical commissioning.
           </p>
-          <div class="w-12 h-1 bg-brand-500 mx-auto mt-3"></div>
+          <div class="w-12 h-1 bg-white/60 mx-auto mt-3"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><!-- 01: Civil & Structural -->
           <div
-            class="bg-white border border-brand-100 hover:border-brand-400 p-6 rounded-sm shadow-sm transition-all flex items-center space-x-4 group">
-            <span class="font-cinzel text-2xl font-bold text-brand-600">01</span>
-            <div class="h-6 w-px bg-brand-200"></div>
+            class="bg-[#74452e]/50 border border-white/25 hover:border-white/60 hover:bg-[#88543a]/70 p-6 rounded-sm shadow-md transition-all flex items-center space-x-4 group backdrop-blur-sm">
+            <span class="font-heading text-2xl font-bold text-amber-100">01</span>
+            <div class="h-6 w-px bg-white/30"></div>
             <h3
-              class="font-bold text-sm uppercase text-slate-900 tracking-wide group-hover:text-brand-600 transition-colors">
+              class="font-bold text-sm uppercase text-white tracking-wide group-hover:text-amber-100 transition-colors">
               Civil &amp; Structural</h3>
           </div>
           <!-- 02: MEP Engineering -->
           <div
-            class="bg-white border border-brand-100 hover:border-brand-400 p-6 rounded-sm shadow-sm transition-all flex items-center space-x-4 group">
-            <span class="font-cinzel text-2xl font-bold text-brand-600">02</span>
-            <div class="h-6 w-px bg-brand-200"></div>
+            class="bg-[#74452e]/50 border border-white/25 hover:border-white/60 hover:bg-[#88543a]/70 p-6 rounded-sm shadow-md transition-all flex items-center space-x-4 group backdrop-blur-sm">
+            <span class="font-heading text-2xl font-bold text-amber-100">02</span>
+            <div class="h-6 w-px bg-white/30"></div>
             <h3
-              class="font-bold text-sm uppercase text-slate-900 tracking-wide group-hover:text-brand-600 transition-colors">
+              class="font-bold text-sm uppercase text-white tracking-wide group-hover:text-amber-100 transition-colors">
               MEP Engineering</h3>
           </div>
           <!-- 03: Medical Gas Pipelines -->
           <div
-            class="bg-white border border-brand-100 hover:border-brand-400 p-6 rounded-sm shadow-sm transition-all flex items-center space-x-4 group">
-            <span class="font-cinzel text-2xl font-bold text-brand-600">03</span>
-            <div class="h-6 w-px bg-brand-200"></div>
+            class="bg-[#74452e]/50 border border-white/25 hover:border-white/60 hover:bg-[#88543a]/70 p-6 rounded-sm shadow-md transition-all flex items-center space-x-4 group backdrop-blur-sm">
+            <span class="font-heading text-2xl font-bold text-amber-100">03</span>
+            <div class="h-6 w-px bg-white/30"></div>
             <h3
-              class="font-bold text-sm uppercase text-slate-900 tracking-wide group-hover:text-brand-600 transition-colors">
+              class="font-bold text-sm uppercase text-white tracking-wide group-hover:text-amber-100 transition-colors">
               Medical Gas Pipelines</h3>
           </div>
           <!-- 04: Modular Operation Theatres -->
           <div
-            class="bg-white border border-brand-100 hover:border-brand-400 p-6 rounded-sm shadow-sm transition-all flex items-center space-x-4 group">
-            <span class="font-cinzel text-2xl font-bold text-brand-600">04</span>
-            <div class="h-6 w-px bg-brand-200"></div>
+            class="bg-[#74452e]/50 border border-white/25 hover:border-white/60 hover:bg-[#88543a]/70 p-6 rounded-sm shadow-md transition-all flex items-center space-x-4 group backdrop-blur-sm">
+            <span class="font-heading text-2xl font-bold text-amber-100">04</span>
+            <div class="h-6 w-px bg-white/30"></div>
             <h3
-              class="font-bold text-sm uppercase text-slate-900 tracking-wide group-hover:text-brand-600 transition-colors">
+              class="font-bold text-sm uppercase text-white tracking-wide group-hover:text-amber-100 transition-colors">
               Modular Operation Theatres</h3>
           </div>
           <!-- 05: Hospital HVAC & Cleanrooms -->
           <div
-            class="bg-white border border-brand-100 hover:border-brand-400 p-6 rounded-sm shadow-sm transition-all flex items-center space-x-4 group">
-            <span class="font-cinzel text-2xl font-bold text-brand-600">05</span>
-            <div class="h-6 w-px bg-brand-200"></div>
+            class="bg-[#74452e]/50 border border-white/25 hover:border-white/60 hover:bg-[#88543a]/70 p-6 rounded-sm shadow-md transition-all flex items-center space-x-4 group backdrop-blur-sm">
+            <span class="font-heading text-2xl font-bold text-amber-100">05</span>
+            <div class="h-6 w-px bg-white/30"></div>
             <h3
-              class="font-bold text-sm uppercase text-slate-900 tracking-wide group-hover:text-brand-600 transition-colors">
+              class="font-bold text-sm uppercase text-white tracking-wide group-hover:text-amber-100 transition-colors">
               Hospital HVAC &amp; Cleanrooms</h3>
           </div>
           <!-- 06: Fire Safety & Suppression -->
           <div
-            class="bg-white border border-brand-100 hover:border-brand-400 p-6 rounded-sm shadow-sm transition-all flex items-center space-x-4 group">
-            <span class="font-cinzel text-2xl font-bold text-brand-600">06</span>
-            <div class="h-6 w-px bg-brand-200"></div>
+            class="bg-[#74452e]/50 border border-white/25 hover:border-white/60 hover:bg-[#88543a]/70 p-6 rounded-sm shadow-md transition-all flex items-center space-x-4 group backdrop-blur-sm">
+            <span class="font-heading text-2xl font-bold text-amber-100">06</span>
+            <div class="h-6 w-px bg-white/30"></div>
             <h3
-              class="font-bold text-sm uppercase text-slate-900 tracking-wide group-hover:text-brand-600 transition-colors">
+              class="font-bold text-sm uppercase text-white tracking-wide group-hover:text-amber-100 transition-colors">
               Fire Safety &amp; Suppression</h3>
           </div>
           <!-- 07: Nurse Call Systems -->
           <div
-            class="bg-white border border-brand-100 hover:border-brand-400 p-6 rounded-sm shadow-sm transition-all flex items-center space-x-4 group">
-            <span class="font-cinzel text-2xl font-bold text-brand-600">07</span>
-            <div class="h-6 w-px bg-brand-200"></div>
+            class="bg-[#74452e]/50 border border-white/25 hover:border-white/60 hover:bg-[#88543a]/70 p-6 rounded-sm shadow-md transition-all flex items-center space-x-4 group backdrop-blur-sm">
+            <span class="font-heading text-2xl font-bold text-amber-100">07</span>
+            <div class="h-6 w-px bg-white/30"></div>
             <h3
-              class="font-bold text-sm uppercase text-slate-900 tracking-wide group-hover:text-brand-600 transition-colors">
+              class="font-bold text-sm uppercase text-white tracking-wide group-hover:text-amber-100 transition-colors">
               Nurse Call Systems</h3>
           </div>
           <!-- 08: Hospital Interiors -->
           <div
-            class="bg-white border border-brand-100 hover:border-brand-400 p-6 rounded-sm shadow-sm transition-all flex items-center space-x-4 group">
-            <span class="font-cinzel text-2xl font-bold text-brand-600">08</span>
-            <div class="h-6 w-px bg-brand-200"></div>
+            class="bg-[#74452e]/50 border border-white/25 hover:border-white/60 hover:bg-[#88543a]/70 p-6 rounded-sm shadow-md transition-all flex items-center space-x-4 group backdrop-blur-sm">
+            <span class="font-heading text-2xl font-bold text-amber-100">08</span>
+            <div class="h-6 w-px bg-white/30"></div>
             <h3
-              class="font-bold text-sm uppercase text-slate-900 tracking-wide group-hover:text-brand-600 transition-colors">
+              class="font-bold text-sm uppercase text-white tracking-wide group-hover:text-amber-100 transition-colors">
               Hospital Interiors</h3>
           </div>
         </div>
       </div>
     </section>
     <!-- END: InfrastructureMatrixSection -->
-    <!-- BEGIN: FeaturedProjectsSection (Sky Blue & Navy Theme) -->
-    <section class="py-20 bg-gradient-to-br from-brand-900 via-brand-700 to-brand-600 text-white relative"
-      data-purpose="featured-projects" id="projects">
+    <!-- BEGIN: FeaturedProjectsSection (Luxury Bronze Theme) -->
+    <section class="py-20 text-white relative border-b border-white/20" data-purpose="featured-projects" id="projects">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-slate-800 pb-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-white/20 pb-6">
           <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-brand-400 block mb-1">Projects</span>
-            <h2 class="font-cinzel text-2xl sm:text-4xl uppercase tracking-wide text-white">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-100 block mb-1">Projects</span>
+            <h2 class="font-heading text-2xl sm:text-4xl uppercase tracking-wide text-white">
               Completed &amp; Ongoing Projects
             </h2>
           </div>
-          <p class="text-xs sm:text-sm text-slate-300 max-w-md mt-3 md:mt-0 leading-relaxed">
+          <p class="text-xs sm:text-sm text-amber-50 max-w-md mt-3 md:mt-0 leading-relaxed font-light">
             Key construction and renovation projects executed across North India.
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- 1: Akhand Jyoti Eye Hospital -->
           <div
-            class="border border-slate-800 bg-deep-950 p-6 rounded-sm hover:border-brand-400 transition-all duration-200 group flex flex-col justify-center">
-            <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block mb-1">Chapra, Bihar</span>
+            class="border border-white/25 bg-[#74452e]/50 p-6 rounded-sm hover:border-white/60 hover:bg-[#88543a]/70 transition-all duration-200 group flex flex-col justify-center shadow-lg backdrop-blur-sm">
+            <span class="text-[10px] font-bold text-amber-100 uppercase tracking-wider block mb-1">Chapra, Bihar</span>
             <h3
-              class="font-cinzel text-base font-bold uppercase text-white group-hover:text-brand-300 transition-colors">
+              class="font-heading text-base font-bold uppercase text-white group-hover:text-amber-100 transition-colors">
               Akhand Jyoti Eye Hospital</h3>
           </div>
           <!-- 2: AIIMS Hostel & Hospital Complex -->
           <div
-            class="border border-slate-800 bg-deep-950 p-6 rounded-sm hover:border-brand-400 transition-all duration-200 group flex flex-col justify-center">
-            <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block mb-1">Awantipora,
+            class="border border-white/25 bg-[#74452e]/50 p-6 rounded-sm hover:border-white/60 hover:bg-[#88543a]/70 transition-all duration-200 group flex flex-col justify-center shadow-lg backdrop-blur-sm">
+            <span class="text-[10px] font-bold text-amber-100 uppercase tracking-wider block mb-1">Awantipora,
               Kashmir</span>
             <h3
-              class="font-cinzel text-base font-bold uppercase text-white group-hover:text-brand-300 transition-colors">
+              class="font-heading text-base font-bold uppercase text-white group-hover:text-amber-100 transition-colors">
               AIIMS Hostel &amp; Hospital Complex</h3>
           </div>
           <!-- 3: Doon Govt Medical College -->
           <div
-            class="border border-slate-800 bg-deep-950 p-6 rounded-sm hover:border-brand-400 transition-all duration-200 group flex flex-col justify-center">
-            <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block mb-1">Dehradun,
+            class="border border-white/25 bg-[#74452e]/50 p-6 rounded-sm hover:border-white/60 hover:bg-[#88543a]/70 transition-all duration-200 group flex flex-col justify-center shadow-lg backdrop-blur-sm">
+            <span class="text-[10px] font-bold text-amber-100 uppercase tracking-wider block mb-1">Dehradun,
               Uttarakhand</span>
             <h3
-              class="font-cinzel text-base font-bold uppercase text-white group-hover:text-brand-300 transition-colors">
+              class="font-heading text-base font-bold uppercase text-white group-hover:text-amber-100 transition-colors">
               Doon Govt Medical College</h3>
           </div>
           <!-- 4: SH Hospital Complex -->
           <div
-            class="border border-slate-800 bg-deep-950 p-6 rounded-sm hover:border-brand-400 transition-all duration-200 group flex flex-col justify-center">
-            <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block mb-1">Rudrapur,
+            class="border border-white/25 bg-[#74452e]/50 p-6 rounded-sm hover:border-white/60 hover:bg-[#88543a]/70 transition-all duration-200 group flex flex-col justify-center shadow-lg backdrop-blur-sm">
+            <span class="text-[10px] font-bold text-amber-100 uppercase tracking-wider block mb-1">Rudrapur,
               Uttarakhand</span>
             <h3
-              class="font-cinzel text-base font-bold uppercase text-white group-hover:text-brand-300 transition-colors">
+              class="font-heading text-base font-bold uppercase text-white group-hover:text-amber-100 transition-colors">
               SH Hospital Complex</h3>
           </div>
           <!-- 5: Kala Hospital -->
           <div
-            class="border border-slate-800 bg-deep-950 p-6 rounded-sm hover:border-brand-400 transition-all duration-200 group flex flex-col justify-center">
-            <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block mb-1">Dehradun,
+            class="border border-white/25 bg-[#74452e]/50 p-6 rounded-sm hover:border-white/60 hover:bg-[#88543a]/70 transition-all duration-200 group flex flex-col justify-center shadow-lg backdrop-blur-sm">
+            <span class="text-[10px] font-bold text-amber-100 uppercase tracking-wider block mb-1">Dehradun,
               Uttarakhand</span>
             <h3
-              class="font-cinzel text-base font-bold uppercase text-white group-hover:text-brand-300 transition-colors">
+              class="font-heading text-base font-bold uppercase text-white group-hover:text-amber-100 transition-colors">
               Kala Hospital</h3>
           </div>
           <!-- 6: Jyoti Multispeciality -->
           <div
-            class="border border-slate-800 bg-deep-950 p-6 rounded-sm hover:border-brand-400 transition-all duration-200 group flex flex-col justify-center">
-            <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block mb-1">Bareilly, Uttar
+            class="border border-white/25 bg-[#74452e]/50 p-6 rounded-sm hover:border-white/60 hover:bg-[#88543a]/70 transition-all duration-200 group flex flex-col justify-center shadow-lg backdrop-blur-sm">
+            <span class="text-[10px] font-bold text-amber-100 uppercase tracking-wider block mb-1">Bareilly, Uttar
               Pradesh</span>
             <h3
-              class="font-cinzel text-base font-bold uppercase text-white group-hover:text-brand-300 transition-colors">
+              class="font-heading text-base font-bold uppercase text-white group-hover:text-amber-100 transition-colors">
               Jyoti Multispeciality</h3>
           </div>
         </div>
       </div>
     </section>
     <!-- END: FeaturedProjectsSection -->
-    <!-- BEGIN: TeamSection -->
-    <section class="py-20 bg-white" data-purpose="engineering-team" id="team">
+    <!-- BEGIN: TeamSection (Warm Bronze Luxury Theme) -->
+    <section class="py-20 text-white border-b border-white/20 relative" data-purpose="engineering-team" id="team">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-14">
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-600 block mb-1">Our Team</span>
-          <h2 class="font-cinzel text-2xl sm:text-3xl text-slate-900 font-semibold tracking-wide uppercase">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-100 block mb-1">Our Team</span>
+          <h2 class="font-heading text-2xl sm:text-3xl text-white   tracking-wide uppercase">
             Engineering &amp; Operations Team
           </h2>
-          <p class="text-xs sm:text-sm text-slate-600 mt-2">
+          <p class="text-xs sm:text-sm text-amber-100/90 mt-2 font-light">
             Engineers, architects, and managers responsible for project execution.
           </p>
-          <div class="w-12 h-1 bg-brand-500 mx-auto mt-3"></div>
+          <div class="w-12 h-1 bg-white/60 mx-auto mt-3"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Architecture & Design -->
-          <div class="p-6 bg-brand-50/30 border border-brand-100 rounded-sm">
+          <div class="p-6 bg-[#74452e]/50 border border-white/25 rounded-sm shadow-md backdrop-blur-sm">
             <h4
-              class="font-cinzel font-bold text-xs text-brand-800 uppercase tracking-wider mb-3 pb-2 border-b border-brand-200">
+              class="font-heading font-bold text-xs text-white uppercase tracking-wider mb-3 pb-2 border-b border-white/20">
               Architecture &amp; Design
             </h4>
-            <ul class="space-y-3 text-xs text-slate-700">
+            <ul class="space-y-3 text-xs text-amber-50">
               <li class="">
-                <strong class="block text-slate-900">Mr. Amir Saifi</strong>
-                <span class="text-slate-500">Healthcare Architect</span>
+                <strong class="block text-white">Mr. Amir Saifi</strong>
+                <span class="text-amber-100">Healthcare Architect</span>
               </li>
               <li class="">
-                <strong class="block text-slate-900">Mr. Aftaab</strong>
-                <span class="text-slate-500">Healthcare Architect</span>
+                <strong class="block text-white">Mr. Aftaab</strong>
+                <span class="text-amber-100">Healthcare Architect</span>
               </li>
             </ul>
           </div>
           <!-- Project Management -->
-          <div class="p-6 bg-brand-50/30 border border-brand-100 rounded-sm">
+          <div class="p-6 bg-[#74452e]/50 border border-white/25 rounded-sm shadow-md backdrop-blur-sm">
             <h4
-              class="font-cinzel font-bold text-xs text-brand-800 uppercase tracking-wider mb-3 pb-2 border-b border-brand-200">
+              class="font-heading font-bold text-xs text-white uppercase tracking-wider mb-3 pb-2 border-b border-white/20">
               Project Management
             </h4>
-            <ul class="space-y-3 text-xs text-slate-700">
+            <ul class="space-y-3 text-xs text-amber-50">
               <li class="">
-                <strong class="block text-slate-900">Mr. Junaid Javaidani</strong>
-                <span class="text-slate-500">Head of Operations</span>
+                <strong class="block text-white">Mr. Junaid Javaidani</strong>
+                <span class="text-amber-100">Head of Operations</span>
               </li>
               <li class="">
-                <strong class="block text-slate-900">Mr. Shamim</strong>
-                <span class="text-slate-500">Project Manager</span>
+                <strong class="block text-white">Mr. Shamim</strong>
+                <span class="text-amber-100">Project Manager</span>
               </li>
               <li class="">
-                <strong class="block text-slate-900">Mr. Ravi Saini</strong>
-                <span class="text-slate-500">Site Operations</span>
+                <strong class="block text-white">Mr. Ravi Saini</strong>
+                <span class="text-amber-100">Site Operations</span>
               </li>
             </ul>
           </div>
           <!-- Site & Structural Engineers -->
-          <div class="p-6 bg-brand-50/30 border border-brand-100 rounded-sm">
+          <div class="p-6 bg-[#74452e]/50 border border-white/25 rounded-sm shadow-md backdrop-blur-sm">
             <h4
-              class="font-cinzel font-bold text-xs text-brand-800 uppercase tracking-wider mb-3 pb-2 border-b border-brand-200">
+              class="font-heading font-bold text-xs text-white uppercase tracking-wider mb-3 pb-2 border-b border-white/20">
               Site &amp; Structural Engineers
             </h4>
-            <ul class="space-y-3 text-xs text-slate-700">
+            <ul class="space-y-3 text-xs text-amber-50">
               <li class="">
-                <strong class="block text-slate-900">Mr. Pushkar Phatak</strong>
-                <span class="text-slate-500">Structural Engineer</span>
+                <strong class="block text-white">Mr. Pushkar Phatak</strong>
+                <span class="text-amber-100">Structural Engineer</span>
               </li>
               <li class="">
-                <strong class="block text-slate-900">Mr. Pravesh Singh</strong>
-                <span class="text-slate-500">Civil Engineer</span>
+                <strong class="block text-white">Mr. Pravesh Singh</strong>
+                <span class="text-amber-100">Civil Engineer</span>
               </li>
               <li class="">
-                <strong class="block text-slate-900">Monu Kumar</strong>
-                <span class="text-slate-500">Site Execution</span>
+                <strong class="block text-white">Monu Kumar</strong>
+                <span class="text-amber-100">Site Execution</span>
               </li>
             </ul>
           </div>
           <!-- Procurement & Corporate -->
-          <div class="p-6 bg-brand-50/30 border border-brand-100 rounded-sm">
+          <div class="p-6 bg-[#74452e]/50 border border-white/25 rounded-sm shadow-md backdrop-blur-sm">
             <h4
-              class="font-cinzel font-bold text-xs text-brand-800 uppercase tracking-wider mb-3 pb-2 border-b border-brand-200">
+              class="font-heading font-bold text-xs text-white uppercase tracking-wider mb-3 pb-2 border-b border-white/20">
               Procurement &amp; Admin
             </h4>
-            <ul class="space-y-2 text-xs text-slate-700">
-              <li class=""><span class="font-semibold text-slate-900">Mr. Amit Thakur</span> • Procurement</li>
-              <li class=""><span class="font-semibold text-slate-900">Mrs. Priyanka Soni</span> • HR</li>
-              <li class=""><span class="font-semibold text-slate-900">Miss Muskan Wadhwa</span> • Coordination</li>
-              <li class=""><span class="font-semibold text-slate-900">Miss Safiya Khanam</span> • Legal</li>
-              <li class=""><span class="font-semibold text-slate-900">Shawn Garcia</span> • Liaison</li>
-              <li class=""><span class="font-semibold text-slate-900">Mr. Amit Singh</span> • Logistics</li>
+            <ul class="space-y-2 text-xs text-amber-50">
+              <li class=""><span class="  text-white">Mr. Amit Thakur</span> • Procurement</li>
+              <li class=""><span class="  text-white">Mrs. Priyanka Soni</span> • HR</li>
+              <li class=""><span class="  text-white">Miss Muskan Wadhwa</span> • Coordination</li>
+              <li class=""><span class="  text-white">Miss Safiya Khanam</span> • Legal</li>
+              <li class=""><span class="  text-white">Shawn Garcia</span> • Liaison</li>
+              <li class=""><span class="  text-white">Mr. Amit Singh</span> • Logistics</li>
             </ul>
           </div>
         </div>
         <!-- Engineering Partners -->
-        <div class="mt-10 p-5 bg-brand-50/40 border border-brand-100 rounded-sm text-center">
-          <span class="text-[10px] uppercase font-bold tracking-wider text-slate-500 block mb-2">Technical
+        <div class="mt-10 p-5 bg-[#683d26]/60 border border-white/25 rounded-sm text-center shadow-md backdrop-blur-sm">
+          <span class="text-[10px] uppercase font-bold tracking-wider text-amber-100 block mb-2">Technical
             Partners</span>
-          <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-700 font-medium">
+          <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-white font-medium">
             <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-200"></span>
               <span class="">WAC Engineers Pvt. Ltd. (Vaishali, UP)</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-200"></span>
               <span class="">Startech Pvt. Ltd. (Ghaziabad, UP)</span>
             </div>
           </div>
@@ -692,101 +680,108 @@
       </div>
     </section>
     <!-- END: TeamSection -->
-    <!-- BEGIN: WideArchitecturalBanner (Clean Navy & Sky Blue Strip) -->
-    <section class="relative h-56 sm:h-64 overflow-hidden border-t border-b border-brand-100">
+    <!-- BEGIN: WideArchitecturalBanner (Warm Bronze & Dark Strip) -->
+    <section class="relative h-56 sm:h-64 overflow-hidden border-t border-b border-white/20">
       <img alt="Modern Institutional Medical Campus Panorama" class="w-full h-full object-cover object-center"
         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjgNwBuG9BcBqp55okbMWJHxlVxYemzMiORhvkpL3c8U02Z8dTOJkWwC7p6qacR5MBK_ISlkYFNREmE_Nf--MrvbJEYTARo6Q7O2zELgjTBdtlFadeymegKD73zXd2svxa3eyspIkBtqqfvgD8fgBBJ312xQkhla3lMImyi1ZcZoLceXLUr6G-MFzCcIfiZpfDYDZLdEIxKSAPozSglM8oZouhAbfg7HYtoaUOAHT3LSr4P6De6jA4">
-      <div class="absolute inset-0 bg-deep-950/80"></div>
+      <div class="absolute inset-0 bg-[#74452e]/70 backdrop-blur-xs"></div>
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-        <span class="text-xs font-bold uppercase tracking-wider text-brand-300 mb-1">Turnkey Contracting</span>
-        <h3 class="font-cinzel text-xl sm:text-3xl text-white font-bold tracking-wide uppercase max-w-2xl">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-100 mb-1">Turnkey Contracting</span>
+        <h3 class="font-heading text-xl sm:text-3xl text-white font-bold tracking-wide uppercase max-w-2xl">
           Hospital Construction &amp; Healthcare Facilities
         </h3>
-        <p class="text-xs text-slate-300 mt-2">
+        <p class="text-xs text-amber-50 mt-2 font-light">
           Civil Structures • Modular Operation Theatres • Cleanroom HVAC • Medical Gas Pipelines
         </p>
       </div>
     </section>
     <!-- END: WideArchitecturalBanner -->
-    <!-- BEGIN: ConsultationFormSection (White & Sky Blue Theme) -->
-    <section class="py-20 bg-white text-slate-800 border-t border-brand-100 relative"
+    <!-- BEGIN: ConsultationFormSection (Warm Bronze Luxury Theme with Faded Hero Skyline Backdrop) -->
+    <section class="py-20 text-white border-t border-white/20 relative overflow-hidden"
       data-purpose="consultation-form-section" id="contact">
+      <!-- Faded Hero Image Background Overlay -->
+      <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <img alt="City skyline sunset backdrop"
+          class="w-full h-full object-cover object-center opacity-25 filter saturate-125" src="image.png">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#8a563d]/85 via-[#74452e]/80 to-[#5d3623]/95"></div>
+      </div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <!-- Left Column: Address & Direct Contacts -->
           <div class="lg:col-span-5 space-y-6">
             <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-600 block mb-1">Inquiries</span>
-              <h2 class="font-cinzel text-2xl sm:text-4xl uppercase tracking-wide leading-tight text-slate-900">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-100 block mb-1">Inquiries</span>
+              <h2 class="font-heading text-2xl sm:text-4xl uppercase tracking-wide leading-tight text-white">
                 Get In Touch With Us
               </h2>
-              <div class="w-12 h-1 bg-brand-500 mt-3"></div>
+              <div class="w-12 h-1 bg-white/60 mt-3"></div>
             </div>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p class="text-xs sm:text-sm text-amber-50 leading-relaxed font-light">
               Contact our team for hospital construction, modular operation theatre setup, or tender inquiries.
             </p>
-            <div class="space-y-4 pt-4 border-t border-slate-200 text-xs text-slate-600">
+            <div class="space-y-4 pt-4 border-t border-white/20 text-xs text-amber-50 font-light">
               <div>
-                <span class="font-bold text-slate-900 uppercase block text-[11px] mb-0.5">Head Office</span>
-                <p class="text-slate-600">F3-776A, Sangam Vihar, New Delhi - 110080</p>
+                <span class="font-bold text-white uppercase block text-[11px] mb-0.5">Head Office</span>
+                <p class="text-amber-50">F3-776A, Sangam Vihar, New Delhi - 110080</p>
               </div>
               <div>
-                <span class="font-bold text-slate-900 uppercase block text-[11px] mb-0.5">Registered Office</span>
-                <p class="text-slate-600">316/274, Saidulajab, Western Marg, Garden of Five Senses Road, New Delhi -
+                <span class="font-bold text-white uppercase block text-[11px] mb-0.5">Registered Office</span>
+                <p class="text-amber-50">316/274, Saidulajab, Western Marg, Garden of Five Senses Road, New Delhi -
                   110030</p>
               </div>
               <div>
-                <span class="font-bold text-slate-900 uppercase block text-[11px] mb-0.5">Phone</span>
-                <p class="text-brand-700 font-semibold">+91 95552 02640 • +91 99539 87881</p>
+                <span class="font-bold text-white uppercase block text-[11px] mb-0.5">Phone</span>
+                <p class="text-white  ">+91 95552 02640 • +91 99539 87881</p>
               </div>
               <div>
-                <span class="font-bold text-slate-900 uppercase block text-[11px] mb-0.5">Email &amp; Website</span>
-                <p class="text-slate-700 font-medium">hello@crescentcare.in • asmedicalinfra@gmail.com</p>
-                <p class="text-brand-600 font-mono text-[11px] mt-0.5 font-semibold">www.crescentcare.in</p>
+                <span class="font-bold text-white uppercase block text-[11px] mb-0.5">Email &amp; Website</span>
+                <p class="text-amber-50 font-medium">hello@crescentcare.in • asmedicalinfra@gmail.com</p>
+                <p class="text-white font-mono text-[11px] mt-0.5  ">www.crescentcare.in</p>
               </div>
             </div>
           </div>
-          <!-- Right Column: Simple Form -->
+          <!-- Right Column: Form in Frosted Warm Luxury Backdrop -->
           <div class="lg:col-span-7">
-            <form action="#" class="bg-brand-50/50 border border-brand-200 p-6 sm:p-8 rounded-sm space-y-4 shadow-sm"
+            <form action="#"
+              class="bg-[#633a25]/75 border border-white/30 p-6 sm:p-8 rounded-sm space-y-4 shadow-2xl backdrop-blur-md"
               data-purpose="contact-form" method="POST">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1"
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-amber-100 mb-1"
                     for="first-name">First Name*</label>
                   <input
-                    class="w-full bg-white border border-slate-300 text-slate-900 text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 placeholder:text-slate-400"
+                    class="w-full bg-brand-500/70 border border-white/30 text-white text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white placeholder:text-amber-100/50"
                     id="first-name" name="first-name" placeholder="First Name" required="" type="text">
                 </div>
                 <div>
-                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1"
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-amber-100 mb-1"
                     for="last-name">Last Name*</label>
                   <input
-                    class="w-full bg-white border border-slate-300 text-slate-900 text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 placeholder:text-slate-400"
+                    class="w-full bg-brand-500/70 border border-white/30 text-white text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white placeholder:text-amber-100/50"
                     id="last-name" name="last-name" placeholder="Last Name" required="" type="text">
                 </div>
               </div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1"
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-amber-100 mb-1"
                     for="mobile">Mobile Number*</label>
                   <input
-                    class="w-full bg-white border border-slate-300 text-slate-900 text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 placeholder:text-slate-400"
+                    class="w-full bg-brand-500/70 border border-white/30 text-white text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white placeholder:text-amber-100/50"
                     id="mobile" name="mobile" placeholder="+91 98765 43210" required="" type="tel">
                 </div>
                 <div>
-                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1"
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-amber-100 mb-1"
                     for="email">Email Address*</label>
                   <input
-                    class="w-full bg-white border border-slate-300 text-slate-900 text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 placeholder:text-slate-400"
+                    class="w-full bg-brand-500/70 border border-white/30 text-white text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white placeholder:text-amber-100/50"
                     id="email" name="email" placeholder="email@domain.com" required="" type="email">
                 </div>
               </div>
               <div>
-                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1"
+                <label class="block text-[10px] font-bold uppercase tracking-wider text-amber-100 mb-1"
                   for="facility-type">Service Required</label>
                 <select
-                  class="w-full bg-white border border-slate-300 text-slate-900 text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
+                  class="w-full bg-brand-500/70 border border-white/30 text-white text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
                   id="facility-type" name="facility-type">
                   <option value="Turnkey Hospital">Turnkey Hospital Construction</option>
                   <option value="Modular OT">Modular Operation Theatre (OT)</option>
@@ -797,18 +792,18 @@
                 </select>
               </div>
               <div>
-                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1"
+                <label class="block text-[10px] font-bold uppercase tracking-wider text-amber-100 mb-1"
                   for="message">Message / Details</label>
                 <textarea
-                  class="w-full bg-white border border-slate-300 text-slate-900 text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 placeholder:text-slate-400"
+                  class="w-full bg-brand-500/70 border border-white/30 text-white text-xs px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white placeholder:text-amber-100/50"
                   id="message" name="message"
                   placeholder="Please mention project location, bed count, or estimated area..." rows="3"></textarea>
               </div>
               <div class="pt-2">
                 <button
-                  class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-sm transition-all duration-200 shadow-sm"
+                  class="btn-tilted w-full py-3.5 bg-brand-600 hover:bg-[#3f2011] text-white font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-md border border-white/30"
                   type="submit">
-                  Send Message
+                  <span>Send Message</span>
                 </button>
               </div>
             </form>
@@ -819,23 +814,32 @@
     <!-- END: ConsultationFormSection -->
   </main>
   <!-- BEGIN: MainFooter -->
-  <footer class="bg-deep-950 text-slate-400 border-t border-slate-800 py-10" data-purpose="site-footer">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center pb-6 border-b border-slate-800">
-        <h3 class="font-cinzel text-lg font-bold tracking-widest text-white uppercase mb-1">CRESCENT CARE • HEALTHCARE
+  <footer
+    class="relative overflow-hidden bg-[#5d3623]/95 text-amber-100 border-t border-white/20 py-10 backdrop-blur-md"
+    data-purpose="site-footer">
+    <!-- Faded Hero Image Background Overlay -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <img alt="City skyline backdrop" class="w-full h-full object-cover object-bottom opacity-15 filter saturate-125"
+        src="image.png">
+      <div class="absolute inset-0 bg-[#5d3623]/85"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center pb-6 border-b border-white/20">
+        <h3 class="font-heading text-lg font-bold tracking-widest text-white uppercase mb-1">CRESCENT CARE • HEALTHCARE
           INFRASTRUCTURE</h3>
-        <p class="text-xs text-brand-300">
+        <p class="text-xs text-amber-100">
           M/s CrescentCare (AS Medical Infra Pvt Ltd) • Estd. 2014 • New Delhi
         </p>
       </div>
-      <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div
+        class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-amber-100/80 font-light">
         <div class="flex flex-wrap items-center justify-center gap-6">
-          <a class="hover:text-brand-300 transition-colors" href="#">About Us</a>
-          <a class="hover:text-brand-300 transition-colors" href="#">Services</a>
-          <a class="hover:text-brand-300 transition-colors" href="#">Projects</a>
-          <a class="hover:text-brand-300 transition-colors" href="#">Contact</a>
+          <a class="hover:text-white transition-colors" href="#about">About Us</a>
+          <a class="hover:text-white transition-colors" href="#matrix">Services</a>
+          <a class="hover:text-white transition-colors" href="#projects">Projects</a>
+          <a class="hover:text-white transition-colors" href="#contact">Contact</a>
         </div>
-        <p class="text-center md:text-right">
+        <p class="text-center md:text-right text-amber-100/70">
           © 2024 Crescent Care (AS Medical Infra Pvt Ltd). All Rights Reserved.
         </p>
       </div>
