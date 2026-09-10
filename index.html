@@ -1,20 +1,858 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Crescent Care / AS Medical Infra Pvt. Ltd. - Premier Healthcare Infrastructure, Modular Operation Theatres (MOT), Medical Gas Pipeline Systems (MGPS), and Turnkey Hospital Construction." />
-  <title>Crescent Care | Healthcare Infrastructure & Turnkey Medical Engineering</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Crescent Care | Healthcare &amp; Hospital Builders</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49'
+            },
+            deep: {
+              900: '#0b192c',
+              950: '#060d17'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Cinzel"', 'serif'],
+          },
+          letterSpacing: {
+            'ultra-wide': '0.22em',
+            'super-wide': '0.35em'
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+  </style>
 </head>
+<body class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+<!-- BEGIN: TopNotificationStrip -->
+<aside class="bg-deep-900 border-b border-brand-500/20 text-brand-200 text-[11px] uppercase tracking-wider py-1.5 px-4 text-center" data-purpose="legal-credentials-banner">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
+<span class="inline-flex items-center gap-1.5 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse"></span>
+        M/S CRESCENTCARE (AS MEDICAL INFRA PVT LTD)
+      </span>
+<span class="text-brand-400/40">|</span>
+<span class="">ESTD. 2014 • NEW DELHI</span>
+<span class="text-brand-400/40">|</span>
+<span class="">HOSPITAL &amp; INSTITUTIONAL INFRASTRUCTURE DIVISION</span>
+</div>
+</aside>
+<!-- END: TopNotificationStrip -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-sky-100 shadow-sm transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Logo Badge -->
+<a class="flex items-center space-x-3 group" data-purpose="brand-link" href="#">
+<div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-brand-600 to-sky-400 flex items-center justify-center text-white font-cinzel font-bold text-xl shadow-md group-hover:scale-105 transition-transform duration-200">
+          C
+        </div>
+<div class="flex flex-col">
+<span class="font-cinzel text-xl font-bold tracking-widest text-deep-900 group-hover:text-brand-600 transition-colors">CRESCENT CARE</span>
+<span class="text-[9px] font-semibold uppercase tracking-ultra-wide text-brand-600">Healthcare Infrastructure</span>
+</div>
+</a>
+<!-- Desktop Navigation Menu -->
+<nav class="hidden lg:flex items-center space-x-8" data-purpose="desktop-nav">
+<a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors" href="#about">About Us</a>
+<a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors" href="#philosophy">Our Philosophy</a>
+<a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors" href="#matrix">Services</a>
+<a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors" href="#projects">Projects</a>
+<a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors" href="#team">Our Team</a>
+<a class="text-xs font-semibold uppercase tracking-wider text-slate-700 hover:text-brand-600 transition-colors" href="#contact">Contact Us</a>
+</nav>
+<!-- CTA Action Button -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center justify-center px-6 py-2.5 rounded-sm bg-gradient-to-r from-deep-900 to-brand-800 text-white text-xs font-semibold tracking-widest uppercase hover:from-brand-700 hover:to-brand-600 transition-all duration-300 shadow-sm border border-brand-400/30" data-purpose="header-cta" href="#contact">
+          Enquire Now
+        </a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: HeroSection (Full-width architectural building with clear structure & low opacity overlay) -->
+<section class="relative min-h-[90vh] flex flex-col justify-between bg-[#2d221c] text-white overflow-hidden" data-purpose="hero-section">
+  <!-- Full-bleed background from image reference -->
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <img alt="Architectural Superstructure High Rise" class="w-full h-full object-cover object-center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJtBkZqsrUEBGxQGPrS43fIXgqS_eqq8lLzatjiB0Jd3K3Fss98BRQjS8&s=10">
+    <!-- Subtle ambient gradient overlay to enhance legibility while keeping towers prominent -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+  </div>
 
-<body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+  <!-- Top accreditation / discrete regulatory badge matching top-right of reference -->
+  <div class="relative z-10 w-full px-6 lg:px-12 pt-6 flex justify-end text-right pointer-events-none">
+    <div class="text-[9px] uppercase tracking-widest text-white/70 leading-relaxed font-sans font-medium">
+      <span class="">REGISTRATION NO.: CC/MED/ND/2024/09 DATED 08.04.2024</span><br>
+      <span class="">PROMOTER: M/S CRESCENTCARE (AS MEDICAL INFRA PVT LTD)</span>
+    </div>
+  </div>
 
-</html>
+  <!-- Main Hero Body with Right-Aligned Luxury/Institutional Typography matching reference -->
+  <div class="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-12 py-16 flex-1 flex items-center justify-end">
+    <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-center text-center space-y-6 pt-12 lg:pt-0">
+      <div class="space-y-3 font-cinzel text-white uppercase tracking-[0.18em] sm:tracking-[0.22em] drop-shadow-md">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+          INDIA'S PREMIER.<br>
+          HEALTHCARE'S FINEST.
+        </h1>
+        <p class="text-sm sm:text-base lg:text-lg font-light tracking-[0.25em] text-white/90">
+          HAS NOW ARRIVED.
+        </p>
+      </div>
+
+      <div class="pt-4">
+        <a class="inline-block px-10 py-3.5 bg-[#8b5a3e]/85 hover:bg-[#9f694a] text-white text-xs font-semibold tracking-[0.22em] uppercase transition-all duration-300 shadow-xl border border-white/20 backdrop-blur-sm" href="#projects">
+          EXPLORE PROJECTS
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Metrics Strip preserved for credential clarity with integrated tone -->
+  <div class="relative z-10 w-full border-t border-white/15 bg-black/40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center divide-y md:divide-y-0 md:divide-x divide-white/10 text-white/90">
+        <div class="pt-2 md:pt-0">
+          <span class="block text-xs uppercase tracking-widest font-bold text-white">12+ Years</span>
+          <span class="text-[10px] text-white/70 tracking-wider uppercase">Engineering Excellence</span>
+        </div>
+        <div class="pt-2 md:pt-0">
+          <span class="block text-xs uppercase tracking-widest font-bold text-white">₹14 CR+</span>
+          <span class="text-[10px] text-white/70 tracking-wider uppercase">Kala Hospital</span>
+        </div>
+        <div class="pt-2 md:pt-0">
+          <span class="block text-xs uppercase tracking-widest font-bold text-white">15+ Modular OTs</span>
+          <span class="text-[10px] text-white/70 tracking-wider uppercase">Ultra Clean Complex</span>
+        </div>
+        <div class="pt-2 md:pt-0">
+          <span class="block text-xs uppercase tracking-widest font-bold text-white">6,500 SQ. M</span>
+          <span class="text-[10px] text-white/70 tracking-wider uppercase">Space</span>
+        </div>
+        <div class="pt-2 md:pt-0">
+          <span class="block text-xs uppercase tracking-widest font-bold text-white">Seismic Class A</span>
+          <span class="text-[10px] text-white/70 tracking-wider uppercase">Resilient Structures</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: AboutUsSection -->
+<section class="py-20 bg-brand-50/40 relative" data-purpose="leadership-heritage-section" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Leadership Portrait Card -->
+<div class="lg:col-span-5">
+<div class="relative bg-deep-900 p-2 sm:p-3 border border-sky-200/80 shadow-2xl">
+<div class="relative aspect-[3/4] bg-slate-800 overflow-hidden group">
+<img alt="Leadership in Healthcare Infrastructure" class="w-full h-full object-cover object-center filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700 opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5V48D4o7JvawOFF1sQMlgAo3bGzLEX6Cr5EGqvMPC9S0rAG1R0cTo6lAEi360F7M9woCos_zY2eBJITp2lxEiy_wmx4h1WY0M-druIhAPi5HqxHrGL1IYp9zVPuopAhEjZLFVhLc1jCcmKbfsiXCuHWNobzPOpiYjKb5Ue-VswNJE-0VnPrrCpbLzpf_PBTVcLdLdf1LPzJaLZhkki8Yr1rItMLNI8ixA9dN1t3H_R3Odt_aJmjsQ">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-950 via-deep-950/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<span class="inline-block text-[10px] uppercase font-bold tracking-super-wide text-brand-400 mb-1">Board of Directors</span>
+<h3 class="font-cinzel text-xl font-bold">Mr. Prithvi Singh &amp; Mr. Sandeep Tiwari</h3>
+<p class="text-xs text-brand-200 mt-0.5">Founders &amp; Managing Directors • Crescent Care</p>
+</div>
+</div>
+<!-- Quote Under Portrait -->
+<div class="mt-4 p-5 bg-white border border-brand-200 text-center">
+<p class="font-cinzel text-xs md:text-sm tracking-wider uppercase text-slate-800 font-semibold leading-relaxed">
+            "Precision in healthcare infrastructure saves lives before surgery even begins."
+          </p>
+<span class="block mt-2 text-[10px] font-bold uppercase tracking-super-wide text-brand-600">
+            — MR. PRITHVI SINGH &amp; MR. SANDEEP TIWARI
+          </span>
+</div>
+</div>
+</div>
+<!-- Right Column: Crisp Direct Builder Narrative & Verbatim OUR VALUE -->
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-block border-b-2 border-brand-500 pb-1">
+<span class="text-xs font-bold uppercase tracking-super-wide text-brand-700">Founded in 2014 • New Delhi</span>
+</div>
+<h2 class="font-cinzel text-2xl sm:text-4xl text-slate-900 font-semibold tracking-wide uppercase leading-tight">
+        Engineering A Healthcare Legacy.
+      </h2>
+<!-- Crisp Direct Builder Copy -->
+<div class="space-y-4 text-slate-700 text-sm leading-relaxed">
+<p class="">
+          Founded in 2014, Crescent Care (M/s CrescentCare - AS Medical Infra Pvt Ltd) delivers comprehensive turnkey hospital superstructures, modular operating theatres, and clinical facilities across India.
+        </p>
+<p class="">
+          Led by <strong>Mr. Prithvi Singh</strong> (Civil &amp; Heavy Hospital Superstructures) and <strong>Mr. Sandeep Tiwari</strong> (Modular OTs, MGPS &amp; Clinical MEP Systems), our multidisciplinary engineering firm executes seismic-compliant medical buildings built strictly to NABH, HTM-02, and NFPA standards.
+        </p>
+</div>
+<!-- Key Metrics Grid -->
+
+<!-- Exact Verbatim 'OUR VALUE' from Corporate Charter / User Slide -->
+<div class="bg-brand-50/40 border-l-4 border-brand-600 p-6 shadow-sm rounded-sm">
+<div class="flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+<span class="font-cinzel text-xs font-bold uppercase tracking-widest text-brand-700 block">Our Philosophy</span>
+</div>
+<p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
+"We use high quality raw material throughout our service in every field as we are one of the renowned quality centric organization and quality is our prior aim. We procure the raw material from quality driven organization that is checked at our quality inspection unit as to provide unique quality service to our esteemed clients. We offer these services after complete planning and designing of the project. We use latest and high performance machinery &amp; equipment in our services. We provide these services in various parts of the country to make a permanent relationship with our esteemed clients."
+</p>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 px-8 py-3.5 bg-slate-900 text-white font-medium text-xs tracking-super-wide uppercase hover:bg-brand-700 transition-colors" href="#philosophy">
+          Discover Our Engineering Heritage →
+        </a>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-sky-200"><div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 sm:p-8 bg-white border border-sky-100 rounded shadow-sm text-center md:divide-x divide-sky-100"><div class="text-center"><span class="font-cinzel text-3xl sm:text-4xl font-bold text-brand-700 block mb-1">12+</span><span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Years Mastery</span></div><div class="text-center"><span class="font-cinzel text-3xl sm:text-4xl font-bold text-brand-700 block mb-1">₹14 CR+</span><span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Kala Hospital</span></div><div class="text-center"><span class="font-cinzel text-3xl sm:text-4xl font-bold text-brand-700 block mb-1">₹16 CR+</span><span class="text-xs font-semibold uppercase tracking-wider text-slate-500">AIIMS Awantipora</span></div><div class="text-center"><span class="font-cinzel text-3xl sm:text-4xl font-bold text-brand-700 block mb-1">75+</span><span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Beds Integrated</span></div></div></div></div>
+</section>
+<!-- END: AboutUsSection -->
+<!-- BEGIN: TimelineSection -->
+<section class="py-24 bg-white border-b border-sky-100 relative overflow-hidden" data-purpose="institutional-timeline" id="philosophy">
+<!-- Panorama Background Banner -->
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+<div class="relative h-40 rounded-sm overflow-hidden shadow-lg border border-sky-200">
+<img alt="Healthcare Construction &amp; Campus Infrastructure" class="w-full h-full object-cover object-center filter brightness-[0.4] contrast-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM1m24MvAWdTMN5Th8r-X0LjZY4JKHSMJxPpIwwCzHeCLD6aXQ492fKmfJO52cv8yZfyciJ6S8TGaVO31jBeDjfLdFBWyO-qSyMn9-LR9Wgo85sbTRYTmhNluCttLGzSHv9Vvt-Eb_8myJVJ3Tr-PPg98rVgxwrIVy61_JE6vvBa8_7IfKkJovknU7Z8_u12xTkS6u88lE7rQ_gGaygwQTeDNDeOrWvmuEz2DL_-RmDPIfuXir32sB">
+<div class="absolute inset-0 bg-gradient-to-r from-deep-950/80 via-transparent to-deep-950/80"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+<span class="text-[11px] font-bold uppercase tracking-super-wide text-brand-300 block mb-1">Milestones of Precision</span>
+<h2 class="font-cinzel text-2xl sm:text-3xl text-white font-semibold uppercase tracking-wide">
+          Institutional Timeline &amp; Credentials
+        </h2>
+<p class="text-xs uppercase tracking-widest text-slate-300 mt-1 max-w-xl">
+          A decade of heavy civil hospital execution and clinical engineering milestones
+        </p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- 2014 -->
+<div class="border border-sky-100 p-6 bg-brand-50/20 relative group hover:border-brand-300 transition-all">
+<span class="font-cinzel text-4xl font-bold text-brand-200 block mb-2 group-hover:text-brand-500 transition-colors">2014</span>
+<div class="w-8 h-0.5 bg-brand-500 mb-4"></div>
+<h4 class="font-bold text-sm text-slate-900 uppercase tracking-wide mb-2">Founded in Delhi</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          Established as AS Medical Infra with core foundational focus on institutional civil engineering and clinical structural builds.
+        </p>
+</div>
+<!-- 2018 -->
+<div class="border border-sky-100 p-6 bg-brand-50/20 relative group hover:border-brand-300 transition-all">
+<span class="font-cinzel text-4xl font-bold text-brand-200 block mb-2 group-hover:text-brand-500 transition-colors">2018</span>
+<div class="w-8 h-0.5 bg-brand-500 mb-4"></div>
+<h4 class="font-bold text-sm text-slate-900 uppercase tracking-wide mb-2">Healthcare Infra Focus</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          Expanded specialized division for complete turnkey superstructures, modular operating theatres and hermetic sterile corridors.
+        </p>
+</div>
+<!-- 2021 -->
+<div class="border border-sky-100 p-6 bg-brand-50/20 relative group hover:border-brand-300 transition-all">
+<span class="font-cinzel text-4xl font-bold text-brand-200 block mb-2 group-hover:text-brand-500 transition-colors">2021</span>
+<div class="w-8 h-0.5 bg-brand-500 mb-4"></div>
+<h4 class="font-bold text-sm text-slate-900 uppercase tracking-wide mb-2">MEP &amp; HVAC Integration</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          Full integration of critical care systems: degreased MGPS copper grids, AHU cleanroom filters, and Class 100 Laminar air flows.
+        </p>
+</div>
+<!-- TODAY -->
+<div class="border border-brand-400 p-6 bg-gradient-to-br from-brand-50 to-white relative group shadow-sm">
+<span class="font-cinzel text-4xl font-bold text-brand-600 block mb-2">TODAY</span>
+<div class="w-8 h-0.5 bg-brand-600 mb-4"></div>
+<h4 class="font-bold text-sm text-slate-900 uppercase tracking-wide mb-2">Premier Hospital Builder</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+          Multi-state presence executing multi-crore medical hubs, AIIMS complexes, and specialized ophthalmic and tertiary hospital centers.
+        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TimelineSection -->
+<!-- BEGIN: InfrastructureMatrixSection (8 Capability Cards with technical labels & clear photos) -->
+<section class="py-24 bg-slate-50 relative" data-purpose="services-matrix" id="matrix">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold uppercase tracking-super-wide text-brand-600 block mb-2">Specialized Healthcare Capabilities</span>
+<h2 class="font-cinzel text-3xl sm:text-4xl text-slate-900 font-semibold tracking-wide uppercase">
+        The Infrastructure Matrix
+      </h2>
+<p class="text-sm text-slate-600 mt-3">
+        From turnkey civil superstructure to hermetic cleanrooms, every discipline engineered to national hospital codes.
+      </p>
+<div class="w-16 h-0.5 bg-brand-500 mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- 01.01: Civil & Structural -->
+<article class="bg-white border border-sky-100 hover:border-brand-400 transition-all rounded-sm overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-md">
+<div>
+<div class="h-32 overflow-hidden relative">
+<img alt="Civil &amp; Heavy Hospital Structural Construction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnqq3Af2uVvtxjWKyP0efB9kllKyrfIjW7Y7G-ImRxMy9-Bjo0Ama8dFaQI3xCiQPdoszifPhRiYOMp45u12psmvaiHKkWe_HZbnov4_Fl8xK0vMpuH0NuO5HKQ-9UyE3TzAT-EPMYbIS_Fl0uP2qCfZve7NcgjiT6A0d1GEADHQGS-iLf7hIUnr2gpbf2YLD_ITZ9PHgt50z5T5kGBIzFzl50F_7hMVlIDYm1AFRBPgW8LNDFp8tV">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-2 right-2 bg-deep-900/80 text-[9px] font-bold text-brand-300 px-2 py-0.5 uppercase tracking-wider">CIVIL &amp; RCC</span>
+<span class="absolute bottom-2 left-3 font-cinzel text-xl font-bold text-white">01.01</span>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm uppercase text-slate-900 tracking-wide mb-2">Civil &amp; Structural</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Heavy RCC hospital load-bearing design, vibration-damped CT/MRI scanner bases, Seismic Class A compliance with high ceiling slab configurations.
+          </p>
+</div>
+</div>
+<div class="px-5 pb-4">
+<span class="inline-block text-[10px] uppercase font-bold text-brand-700 tracking-wider bg-brand-50 px-2 py-0.5 rounded">
+          RCC Frames • Heavy Slab
+        </span>
+</div>
+</article>
+<!-- 01.02: MEP Engineering -->
+<article class="bg-white border border-sky-100 hover:border-brand-400 transition-all rounded-sm overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-md">
+<div>
+<div class="h-32 overflow-hidden relative">
+<img alt="Hospital MEP &amp; Electrical Engineering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFrythHzrc6tDmIzRbbdsWl5gdS8FGp8x2va9NHdxMBhMm19MKVvo8IlrJgXsKqfVTuU2xFEMutrh-ONoJySov1EtHA7m-0eRfgMZEt4Z0y0o4ceyUhVhx8IXGce1WO54Ppfi1BXpb7-yKNY_6f61ILDy0S3eDRy_jXuStvZCQIK4_dFJ9PHgs8n0ai9SelvtY8u12rbpY8GQMW52RsqU6o2_Thtt7x82bU1FagCXjX5M_GZieasPo">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-2 right-2 bg-deep-900/80 text-[9px] font-bold text-brand-300 px-2 py-0.5 uppercase tracking-wider">ELECTRICAL &amp; MEP</span>
+<span class="absolute bottom-2 left-3 font-cinzel text-xl font-bold text-white">01.02</span>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm uppercase text-slate-900 tracking-wide mb-2">MEP Engineering</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            High-voltage &amp; low-voltage dual main distribution, clean power isolation transformers, automated generator changeovers, and medical drainage.
+          </p>
+</div>
+</div>
+<div class="px-5 pb-4">
+<span class="inline-block text-[10px] uppercase font-bold text-brand-700 tracking-wider bg-brand-50 px-2 py-0.5 rounded">
+          HV/LV Distribution • Dual Mains
+        </span>
+</div>
+</article>
+<!-- 01.03: MGPS Gas Pipeline -->
+<article class="bg-white border border-sky-100 hover:border-brand-400 transition-all rounded-sm overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-md">
+<div>
+<div class="h-32 overflow-hidden relative">
+<img alt="Medical Gas Pipeline Systems MGPS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhNf8N7Bxvw2VqrlBVhBuzkdX7AHxx6QTw6VYSOulvhgZmZqnO9278cDTvR_jt2jX6zMah5ualvoPM2rCcFdnH0fv2CCbCIU5YYyJPUOhTEngR61ndnkyrgiMIC-wxe2uzQAF-hisgeDLCUT1h1gfDyNwfrffDYsnLsouE8koyzoMtDv9I-_2MqJUkbZK4jgn4a8vtJgG8dUok3dhog8IkyJ7-l1PZQznrRKgFZQXoV0XzWJgvoLzw">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-2 right-2 bg-deep-900/80 text-[9px] font-bold text-brand-300 px-2 py-0.5 uppercase tracking-wider">MGPS SYSTEM</span>
+<span class="absolute bottom-2 left-3 font-cinzel text-xl font-bold text-white">01.03</span>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm uppercase text-slate-900 tracking-wide mb-2">MGPS Gas Pipeline</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Medical grade degreased copper pipelines, central manifold systems, liquid medical oxygen (LMO) bulk storage, and zone valve alarm boxes.
+          </p>
+</div>
+</div>
+<div class="px-5 pb-4">
+<span class="inline-block text-[10px] uppercase font-bold text-brand-700 tracking-wider bg-brand-50 px-2 py-0.5 rounded">
+          Degreased Copper • HTM 02-01
+        </span>
+</div>
+</article>
+<!-- 01.04: Modular Surgical OT -->
+<article class="bg-white border border-sky-100 hover:border-brand-400 transition-all rounded-sm overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-md">
+<div>
+<div class="h-32 overflow-hidden relative">
+<img alt="Modular Operating Theatres" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbb4rIHajwA19ybsfj3bJ-01erQmsM46njOWZUBy3Ct6ID_IR2jayFdqpZ3XkRRiMIyJACNjz9DcXB9uE327JWGQRKN5AUzbWCFfs0lUFFbTj05VuDLX0t_7mO5e6JERFogCFwpkEeri35hOMw9mWgaJlscUtCMMPyut6A8dUMmKvY5uxO2x2TPyLSymj6JF-yge3YIemR0fMXOEfCsY6hfNV8U5jJW5fpCuw9Ewqi22Aw3tK5B1K9">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-2 right-2 bg-deep-900/80 text-[9px] font-bold text-brand-300 px-2 py-0.5 uppercase tracking-wider">STERILE OT</span>
+<span class="absolute bottom-2 left-3 font-cinzel text-xl font-bold text-white">01.04</span>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm uppercase text-slate-900 tracking-wide mb-2">Modular Surgical OT</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Hermetically sealed SS 304 / anti-bacterial HPL wall panels, seamless conductive flooring, surgical pendants, and touchscreen surgeon consoles.
+          </p>
+</div>
+</div>
+<div class="px-5 pb-4">
+<span class="inline-block text-[10px] uppercase font-bold text-brand-700 tracking-wider bg-brand-50 px-2 py-0.5 rounded">
+          SS 304 • Hermetic Seals
+        </span>
+</div>
+</article>
+<!-- 01.05: Clinical HVAC & HEPA -->
+<article class="bg-white border border-sky-100 hover:border-brand-400 transition-all rounded-sm overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-md">
+<div>
+<div class="h-32 overflow-hidden relative">
+<img alt="Clinical Cleanroom HVAC &amp; Air Ducts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5JAf7YkM60UPccCcHUFix9HDo5XMxu2Yrq3lSxBil0zr_-Y2ecsD-qBT3HLh3LqwXKj4Co-4RgiTd4pZ2Xit48G27L_QoFH-MPPqVnTqnMNz1t7CPia_VIBKqoJ_sxnewcCPlA-GFr7kjSC_gWJ7v1EkslYJwCqnrkhx4E27Ub1mHVaX2c62IgqNAZyeLE6Lvy-lBxdjc6Stgp4ATB91GHJyMZAAL7Yh0oJBXqkOh8kwrl0uKQBsR">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-2 right-2 bg-deep-900/80 text-[9px] font-bold text-brand-300 px-2 py-0.5 uppercase tracking-wider">AIR QUALITY</span>
+<span class="absolute bottom-2 left-3 font-cinzel text-xl font-bold text-white">01.05</span>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm uppercase text-slate-900 tracking-wide mb-2">Clinical HVAC &amp; HEPA</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Laminar airflow canopies (Class 100 / ISO 5), HEPA H14 terminal filtration, constant positive pressure gradients, and humidity modulation.
+          </p>
+</div>
+</div>
+<div class="px-5 pb-4">
+<span class="inline-block text-[10px] uppercase font-bold text-brand-700 tracking-wider bg-brand-50 px-2 py-0.5 rounded">
+          ISO Class 5 • Laminar Flow
+        </span>
+</div>
+</article>
+<!-- 01.06: Fire & Suppression Matrix -->
+<article class="bg-white border border-sky-100 hover:border-brand-400 transition-all rounded-sm overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-md">
+<div>
+<div class="h-32 overflow-hidden relative">
+<img alt="Fire Suppression &amp; Life Safety" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj0YV-GxBFSxoGCR5WRpDIzyg6rnuUuo_utgltxNWqDEVKqeBNvkOcN8tCZTwThb5fso3K4bEeNDbc8-rKyR3ST5r1DnbbE-Qb5kuTw_7m8r1AVMzSJTq2s0V9KHzjoYlc9lXP7lk2lmuH4oOAlQPSXAZRI8Act3D9AfA72VCXQXyddYrR2X4WbIu30LlGvDhimXtb5LB5g2BFGMQ4JilcAkPa9UNUIAET0jPBZRX9Tw6NWQ5KCqev">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-2 right-2 bg-deep-900/80 text-[9px] font-bold text-brand-300 px-2 py-0.5 uppercase tracking-wider">SAFETY</span>
+<span class="absolute bottom-2 left-3 font-cinzel text-xl font-bold text-white">01.06</span>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm uppercase text-slate-900 tracking-wide mb-2">Fire &amp; Suppression Matrix</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            NFPA 99 &amp; NBC Part 4 hospital firefighting, clean agent gas suppression (FM-200 / Novec 1230 for server &amp; OT rooms), and wet riser circuits.
+          </p>
+</div>
+</div>
+<div class="px-5 pb-4">
+<span class="inline-block text-[10px] uppercase font-bold text-brand-700 tracking-wider bg-brand-50 px-2 py-0.5 rounded">
+          NFPA 99 • FM200 Clean Agent
+        </span>
+</div>
+</article>
+<!-- 01.07: IP Nurse Call & Telemetry -->
+<article class="bg-white border border-sky-100 hover:border-brand-400 transition-all rounded-sm overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-md">
+<div>
+<div class="h-32 overflow-hidden relative">
+<img alt="Nurse Call Telemetry &amp; Automation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgRDZ_5JJigfr21dXb1ssphDepvDdHpF5as-x4SUjsgVzDRhfPp2uzPIJVYA34zy8pK58hWy9nk2KzKWG8ocwDdl_Q_JfAYr16fmriHcTjQUCtjnBDtT8X_GldEM0ouybnkUIbE1mzpAvtcTKEEfkzDK3ca_Pt8ujuRYPipy91YPUrwiCpc0GjSoMGGtL23dMXT7AVr-QxFysL_0yFGj3jfkFBDmPl1efL6bFlLI1g3bOo13iJWuKA">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-2 right-2 bg-deep-900/80 text-[9px] font-bold text-brand-300 px-2 py-0.5 uppercase tracking-wider">AUTOMATION</span>
+<span class="absolute bottom-2 left-3 font-cinzel text-xl font-bold text-white">01.07</span>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm uppercase text-slate-900 tracking-wide mb-2">IP Nurse Call &amp; Telemetry</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Full-duplex IP bed head consoles, water-resistant bathroom pull-cords, central corridor indicators, and real-time medical alarm escalation.
+          </p>
+</div>
+</div>
+<div class="px-5 pb-4">
+<span class="inline-block text-[10px] uppercase font-bold text-brand-700 tracking-wider bg-brand-50 px-2 py-0.5 rounded">
+          IP Nurse Call • Instant Alert
+        </span>
+</div>
+</article>
+<!-- 01.08: Acoustic Clinical Interiors -->
+<article class="bg-white border border-sky-100 hover:border-brand-400 transition-all rounded-sm overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-md">
+<div>
+<div class="h-32 overflow-hidden relative">
+<img alt="Hospital Acoustic Interiors &amp; Corridors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnBVV0mnACm4x08SvyU1sK1ckT-f2tbxzIlA9ktIgXwSvmit1B6owXoGJGs1TS-MRD4nhCRruzyvjdShuR-Jl3VRWzpEu23SuH6Z-y4BKi7wRrTNLNEa9aOs2uTT78wctFconEcAYcXKAC3L7GxzdaBqfZEKkD2MlI8c-WQqwDyDCVNtDRNZuyRr9jRKFn3YZZTIk_0cyfAH9USAPI9w6xeG6BNgYR4jfNW4oQuCu2f57wZiydpFK_">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-2 right-2 bg-deep-900/80 text-[9px] font-bold text-brand-300 px-2 py-0.5 uppercase tracking-wider">FINISHES</span>
+<span class="absolute bottom-2 left-3 font-cinzel text-xl font-bold text-white">01.08</span>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm uppercase text-slate-900 tracking-wide mb-2">Acoustic Clinical Interiors</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Heavy-duty coved antibacterial vinyl flooring, crash rails, wall guards, acoustic ceiling baffles for ICUs, and lead-lined radiation shielding doors.
+          </p>
+</div>
+</div>
+<div class="px-5 pb-4">
+<span class="inline-block text-[10px] uppercase font-bold text-brand-700 tracking-wider bg-brand-50 px-2 py-0.5 rounded">
+          Antibacterial Vinyl • Coved
+        </span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: InfrastructureMatrixSection -->
+<!-- BEGIN: FeaturedProjectsSection (6 Case Studies) -->
+<section class="py-24 bg-deep-950 text-white relative" data-purpose="featured-projects" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-brand-500/20 pb-8">
+<div>
+<span class="text-xs font-bold uppercase tracking-super-wide text-brand-400 block mb-2">Turnkey Case Studies</span>
+<h2 class="font-cinzel text-3xl sm:text-5xl font-light uppercase tracking-wide text-white">
+          Featured Healthcare <span class="font-semibold text-brand-300">Infrastructure</span>
+</h2>
+</div>
+<p class="text-xs sm:text-sm text-brand-200/80 max-w-md mt-4 md:mt-0 leading-relaxed">
+        Institutional hospital footprints engineered with uncompromising precision across North India.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- 1: Akhand Jyoti Eye Hospital -->
+<div class="border border-brand-500/30 bg-deep-900/80 p-6 flex flex-col justify-between group hover:border-brand-400 transition-all duration-300">
+<div>
+<div class="aspect-video bg-slate-900 overflow-hidden mb-5 relative">
+<img alt="Akhand Jyoti Eye Hospital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB-t-foLDF2rwbxx1fa087XKRAE-bF-QSzYtTd70_wItqi1_MhN1ff0Qzdyeu66-BOTMDDxhl2G7TJLHl25GoDhPX16DdmId3fdBDdqpabcPhQgzgXlnFAa3j-899_cxvkFx481B-jf5Hym8XiUXHvB0YI2B8rO88GedbYPDCYJ9DifON_hDZXB8aQa1bZdDk95ZD0KLfMg4jSMVcygdZVfHbnckW90FHVFrAyzZwuzbWZnj0vp5Xn">
+<span class="absolute top-3 left-3 bg-brand-600 text-white text-[9px] font-bold uppercase px-2.5 py-1 tracking-widest">
+            ₹10 CR+ Project
+          </span>
+</div>
+<span class="text-[10px] font-bold text-brand-400 uppercase tracking-widest block mb-1">Chapra, Bihar</span>
+<h3 class="font-cinzel text-xl font-bold uppercase text-white mb-3">Akhand Jyoti Eye Hospital</h3>
+<p class="text-xs text-brand-100/70 leading-relaxed mb-4">
+          State-of-the-art super-speciality eye hospital with 15 advanced modular OTs, HEPA HVAC cleanrooms, centralized MGPS manifold, and patient wards.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-500/20 flex items-center justify-between text-[11px] text-brand-200 uppercase">
+<span class="">4,500 SQ. M</span>
+<span class="font-semibold text-brand-400">15 Modular OTs</span>
+</div>
+</div>
+<!-- 2: AIIMS Awantipora -->
+<div class="border border-brand-500/30 bg-deep-900/80 p-6 flex flex-col justify-between group hover:border-brand-400 transition-all duration-300">
+<div>
+<div class="aspect-video bg-slate-900 overflow-hidden mb-5 relative">
+<img alt="AIIMS Awantipora Campus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoVlnhTgK0tnvqh4aSuudd1K89Wqu-N1689qtbegJxpr8oVXyNbRLTwojXO9knyZo0qjjRQcY81p4kBKSdhfZQMzQCVgNBz8KTVD3ENfYk78Z9BPnXWWnREWg97aQKiUAMXV19D5RGZsBD375eX3CbZWO9EqllZ08PZ7YzOM-CcOlrFfoTtrcyfcWvdaAP_6jV5fXiaS0YXzt0kDyqshxDHbY0GV2C-_eOuhUPQcJ7FdyaO8mnauqr">
+<span class="absolute top-3 left-3 bg-brand-600 text-white text-[9px] font-bold uppercase px-2.5 py-1 tracking-widest">
+            ₹16 CR Work Order
+          </span>
+</div>
+<span class="text-[10px] font-bold text-brand-400 uppercase tracking-widest block mb-1">Awantipora, Kashmir</span>
+<h3 class="font-cinzel text-xl font-bold uppercase text-white mb-3">AIIMS Hostel &amp; Hospital Complex</h3>
+<p class="text-xs text-brand-100/70 leading-relaxed mb-4">
+          Prestige Central Government institutional healthcare infrastructure, featuring residential medical suites, heavy RCC superstructure, and advanced MEP ducting.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-500/20 flex items-center justify-between text-[11px] text-brand-200 uppercase">
+<span class="">8,200 SQ. M</span>
+<span class="font-semibold text-brand-400">120+ Rooms</span>
+</div>
+</div>
+<!-- 3: Doon Govt Medical College -->
+<div class="border border-brand-500/30 bg-deep-900/80 p-6 flex flex-col justify-between group hover:border-brand-400 transition-all duration-300">
+<div>
+<div class="aspect-video bg-slate-900 overflow-hidden mb-5 relative">
+<img alt="Doon Government Medical College" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh5VC-N9f945H12GqiRavcnugmFb9vaqzmxmywg29UMF39UiU763t0KhQWxugOro_dOXSkmQucLcedzqd7cfesf0dy1F67T6E2BJyX4_rcDutrL1KUhzo5jgkcS3jkw8oaD5kWIZBbFg68bMtb4xvK2NhYwB4Sn0ratC1lYjW8-VMeRcqJmjPPa9PEeJH-sbeM6PARGwcnDGF8fU4dmwI1atSDfoIPkJfW_V1hQ3earyqjtEMDNuhZ">
+<span class="absolute top-3 left-3 bg-brand-600 text-white text-[9px] font-bold uppercase px-2.5 py-1 tracking-widest">
+            ₹8.5 CR Scale
+          </span>
+</div>
+<span class="text-[10px] font-bold text-brand-400 uppercase tracking-widest block mb-1">Dehradun, Uttarakhand</span>
+<h3 class="font-cinzel text-xl font-bold uppercase text-white mb-3">Doon Govt Medical College</h3>
+<p class="text-xs text-brand-100/70 leading-relaxed mb-4">
+          5 High-efficiency surgical modular operating suites, specialized scrub stations, surgical pendants, and hospital-wide Medical Gas Pipeline System.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-500/20 flex items-center justify-between text-[11px] text-brand-200 uppercase">
+<span class="">4,800 SQ. M</span>
+<span class="font-semibold text-brand-400">5 Modular OTs</span>
+</div>
+</div>
+<!-- 4: SH Hospital Complex -->
+<div class="border border-brand-500/30 bg-deep-900/80 p-6 flex flex-col justify-between group hover:border-brand-400 transition-all duration-300">
+<div>
+<div class="aspect-video bg-slate-900 overflow-hidden mb-5 relative">
+<img alt="SH Hospital Rudrapur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrNec2IEHK_OLwi3F6Tu6KFNzYlgsIJ2rpKEcGubjfyFj-75_9DqfJaGbBD68PZH42SDtEvWF0Lh22ID3Nzx2AIQzGAgS9JiIbWXjE8bpfPmg62NDa04QpmBJlcDItp2xKgZM4L5CZ05ADmVD_UYcAApRMTMjae37vyeL4TjfA7dRQg2LQqfrQfe8tRoZTeudzsegBtY886dP3EayJc3CNdscM62nSOflQbyW3kjEm1rtENNI792YM">
+<span class="absolute top-3 left-3 bg-brand-600 text-white text-[9px] font-bold uppercase px-2.5 py-1 tracking-widest">
+            ₹12 CR+ Project
+          </span>
+</div>
+<span class="text-[10px] font-bold text-brand-400 uppercase tracking-widest block mb-1">Rudrapur, Uttarakhand</span>
+<h3 class="font-cinzel text-xl font-bold uppercase text-white mb-3">SH Hospital Complex</h3>
+<p class="text-xs text-brand-100/70 leading-relaxed mb-4">
+          Comprehensive 75-bed multi-speciality medical center. Full civil building execution, HVAC chilled water system, central emergency oxygen lines.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-500/20 flex items-center justify-between text-[11px] text-brand-200 uppercase">
+<span class="">6,500 SQ. M</span>
+<span class="font-semibold text-brand-400">75 Inpatient Beds</span>
+</div>
+</div>
+<!-- 5: Kala Healthcare Hub -->
+<div class="border border-brand-500/30 bg-deep-900/80 p-6 flex flex-col justify-between group hover:border-brand-400 transition-all duration-300">
+<div>
+<div class="aspect-video bg-slate-900 overflow-hidden mb-5 relative">
+<img alt="KALA Healthcare Dehradun" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLun2iogUbxh903W135sWMugKZsyYwjcy6PAKafDWg6b3XUFvCRNRbq6AP_2P_89UXSnTOhMh3a7wA1S4qgiBt2wZV8F62DeR8g1iUc5JthZZn0rOGfTZg1bje9lGLU2V8K6Aw-wzBJSOcqlAgH4hQM-9yZGdc6Pwn6oVSj32QiNbIxeQe7cfvEYidCuMudMu76p0oKRZnwmVT8ZfZQV6MLLMNo9nzxLeVFhuE3mUx9MIUexaOhTj9">
+<span class="absolute top-3 left-3 bg-brand-600 text-white text-[9px] font-bold uppercase px-2.5 py-1 tracking-widest">
+            ₹14 CR Turnkey
+          </span>
+</div>
+<span class="text-[10px] font-bold text-brand-400 uppercase tracking-widest block mb-1">Dehradun, Uttarakhand</span>
+<h3 class="font-cinzel text-xl font-bold uppercase text-white mb-3">KALA Healthcare Hub</h3>
+<p class="text-xs text-brand-100/70 leading-relaxed mb-4">
+          Turnkey multi-floor medical building with acoustic clinical interiors, lead-lined radiology suites, and anti-static ICU vinyl flooring.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-500/20 flex items-center justify-between text-[11px] text-brand-200 uppercase">
+<span class="">5,350 SQ. M</span>
+<span class="font-semibold text-brand-400">NABH Compliant</span>
+</div>
+</div>
+<!-- 6: Jyoti Multispeciality -->
+<div class="border border-brand-500/30 bg-deep-900/80 p-6 flex flex-col justify-between group hover:border-brand-400 transition-all duration-300">
+<div>
+<div class="aspect-video bg-slate-900 overflow-hidden mb-5 relative">
+<img alt="Jyoti Multispeciality Hospital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7Y71pL6NI3e5ovGHRRU3tfZRz1faYqjX4tcY4ng8omnZ4bRs8xFAFC0NQiMP1qbbTYQH-4Ei8930GS3aC0WyTgZyEcq8uS4AmLYFeHmjGl7RYgxYluTEOqpWFT5mpGMgPSOpp-nzEpflaHsGUPC7Osi0jED3DZ3ppbCyQsYf3f6z191KaAj2rn3QaCMZvP4u4xli-FH0L70cFyf9NvQuQSTnum-y6DHRw42kwmSrGkTppWP1GuDjm">
+<span class="absolute top-3 left-3 bg-brand-600 text-white text-[9px] font-bold uppercase px-2.5 py-1 tracking-widest">
+            ₹5.2 CR Facility
+          </span>
+</div>
+<span class="text-[10px] font-bold text-brand-400 uppercase tracking-widest block mb-1">Bareilly, Uttar Pradesh</span>
+<h3 class="font-cinzel text-xl font-bold uppercase text-white mb-3">Jyoti Multispeciality</h3>
+<p class="text-xs text-brand-100/70 leading-relaxed mb-4">
+          Semi-modular surgical suites, ICU medical gas pipeline distribution, and NFPA compliant fire detection network.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-500/20 flex items-center justify-between text-[11px] text-brand-200 uppercase">
+<span class="">3,200 SQ. M</span>
+<span class="font-semibold text-brand-400">ICU &amp; OT Complex</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FeaturedProjectsSection -->
+<!-- BEGIN: TeamSection -->
+<section class="py-24 bg-white" data-purpose="engineering-team" id="team">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs font-bold uppercase tracking-super-wide text-brand-600 block mb-2">Multidisciplinary Brain Trust</span>
+<h2 class="font-cinzel text-3xl sm:text-4xl text-slate-900 font-semibold tracking-wide uppercase">
+        Core Engineering &amp; Operations Team
+      </h2>
+<p class="text-xs sm:text-sm text-slate-600 mt-2">
+        The seasoned architects, site engineers, and MEP specialists orchestrating every clinical build.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Architecture & Design -->
+<div class="p-6 bg-brand-50/40 border border-sky-100 rounded-sm">
+<h4 class="font-cinzel font-bold text-sm text-brand-800 uppercase tracking-wider mb-3 pb-2 border-b border-brand-200">
+        Architecture &amp; Design
+      </h4>
+<ul class="space-y-3 text-xs text-slate-700">
+<li class="">
+<strong class="block text-slate-900">Mr. Amir Saifi</strong>
+<span class="text-slate-500">Senior Healthcare Architect</span>
+</li>
+<li class="">
+<strong class="block text-slate-900">Mr. Aftaab</strong>
+<span class="text-slate-500">Senior Healthcare Architect</span>
+</li>
+</ul>
+</div>
+<!-- Project Management -->
+<div class="p-6 bg-brand-50/40 border border-sky-100 rounded-sm">
+<h4 class="font-cinzel font-bold text-sm text-brand-800 uppercase tracking-wider mb-3 pb-2 border-b border-brand-200">
+        Project Management
+      </h4>
+<ul class="space-y-3 text-xs text-slate-700">
+<li class="">
+<strong class="block text-slate-900">Mr. Junaid Javaidani</strong>
+<span class="text-slate-500">Head of Operations &amp; Site Delivery</span>
+</li>
+<li class="">
+<strong class="block text-slate-900">Mr. Shamim</strong>
+<span class="text-slate-500">Senior Project Manager</span>
+</li>
+<li class="">
+<strong class="block text-slate-900">Mr. Ravi Saini</strong>
+<span class="text-slate-500">Project Operations Lead</span>
+</li>
+</ul>
+</div>
+<!-- Site & Structural Engineers -->
+<div class="p-6 bg-brand-50/40 border border-sky-100 rounded-sm">
+<h4 class="font-cinzel font-bold text-sm text-brand-800 uppercase tracking-wider mb-3 pb-2 border-b border-brand-200">
+        Site &amp; Structural Engineers
+      </h4>
+<ul class="space-y-3 text-xs text-slate-700">
+<li class="">
+<strong class="block text-slate-900">Mr. Pushkar Phatak</strong>
+<span class="text-slate-500">Lead Structural Engineer</span>
+</li>
+<li class="">
+<strong class="block text-slate-900">Mr. Pravesh Singh</strong>
+<span class="text-slate-500">Senior Civil Engineer</span>
+</li>
+<li class="">
+<strong class="block text-slate-900">Monu Kumar</strong>
+<span class="text-slate-500">Site Execution Specialist</span>
+</li>
+</ul>
+</div>
+<!-- Procurement & Corporate -->
+<div class="p-6 bg-brand-50/40 border border-sky-100 rounded-sm">
+<h4 class="font-cinzel font-bold text-sm text-brand-800 uppercase tracking-wider mb-3 pb-2 border-b border-brand-200">
+        Procurement &amp; Corporate
+      </h4>
+<ul class="space-y-2 text-xs text-slate-700">
+<li class=""><span class="font-semibold text-slate-900">Mr. Amit Thakur</span> • Procurement</li>
+<li class=""><span class="font-semibold text-slate-900">Mrs. Priyanka Soni</span> • HR Head</li>
+<li class=""><span class="font-semibold text-slate-900">Miss Muskan Wadhwa</span> • Coordination</li>
+<li class=""><span class="font-semibold text-slate-900">Miss Safiya Khanam</span> • Legal Compliance</li>
+<li class=""><span class="font-semibold text-slate-900">Shawn Garcia</span> • Liaison</li>
+<li class=""><span class="font-semibold text-slate-900">Mr. Amit Singh</span> • Supply Operations</li>
+</ul>
+</div>
+</div>
+<!-- Institutional MEP Engineering Partners -->
+<div class="mt-12 p-6 bg-slate-50 border border-sky-100 text-center">
+<span class="text-[10px] uppercase font-bold tracking-super-wide text-slate-500 block mb-3">Institutional MEP Engineering Partners</span>
+<div class="flex flex-wrap items-center justify-center gap-8 text-xs font-semibold text-slate-700 uppercase tracking-wider">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-600"></span>
+<span class="">WAC Engineers Pvt. Ltd. (Vaishali, UP)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-600"></span>
+<span class="">Startech Pvt. Ltd. (Ghaziabad, UP)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TeamSection -->
+<!-- BEGIN: WideArchitecturalBanner -->
+<section class="relative h-60 sm:h-72 overflow-hidden border-t border-b border-sky-200">
+<img alt="Modern Institutional Medical Campus Panorama" class="w-full h-full object-cover object-center filter brightness-[0.45] contrast-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjgNwBuG9BcBqp55okbMWJHxlVxYemzMiORhvkpL3c8U02Z8dTOJkWwC7p6qacR5MBK_ISlkYFNREmE_Nf--MrvbJEYTARo6Q7O2zELgjTBdtlFadeymegKD73zXd2svxa3eyspIkBtqqfvgD8fgBBJ312xQkhla3lMImyi1ZcZoLceXLUr6G-MFzCcIfiZpfDYDZLdEIxKSAPozSglM8oZouhAbfg7HYtoaUOAHT3LSr4P6De6jA4">
+<div class="absolute inset-0 bg-gradient-to-r from-deep-950 via-deep-900/60 to-deep-950"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+<span class="text-xs font-bold uppercase tracking-super-wide text-brand-300 mb-2">Architectural Excellence &amp; Scale</span>
+<h3 class="font-cinzel text-2xl sm:text-4xl text-white font-bold tracking-wider uppercase max-w-3xl">
+    Building Resilient Healthcare Hubs Across India
+  </h3>
+<p class="text-xs sm:text-sm text-slate-300 uppercase tracking-widest mt-2">
+    Turnkey Project Contracting • Structural Civil • Cleanrooms • MEP
+  </p>
+</div>
+</section>
+<!-- END: WideArchitecturalBanner -->
+<!-- BEGIN: ConsultationFormSection -->
+<section class="py-24 bg-deep-900 text-white relative" data-purpose="consultation-form-section" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Address & Direct Contacts -->
+<div class="lg:col-span-5 space-y-6">
+<span class="text-xs font-bold uppercase tracking-super-wide text-brand-400 block">Institutional Procurement</span>
+<h2 class="font-cinzel text-3xl sm:text-5xl font-light uppercase tracking-wide leading-tight">
+        Schedule A <br>
+<span class="font-semibold text-white">Technical Consultation.</span>
+</h2>
+<p class="text-xs sm:text-sm text-brand-100/70 leading-relaxed">
+        Connect directly with our turnkey hospital engineering division to curate your clinical infrastructure, modular OT complex, or government healthcare tender.
+      </p>
+<div class="space-y-4 pt-4 border-t border-brand-500/20 text-xs text-brand-200">
+<div>
+<span class="font-bold text-white uppercase block text-[11px] tracking-wider mb-0.5">Head Office</span>
+<p class="">F3-776A, Sangam Vihar, New Delhi - 110080</p>
+</div>
+<div>
+<span class="font-bold text-white uppercase block text-[11px] tracking-wider mb-0.5">Registered Office</span>
+<p class="">316/274, Saidulajab, Western Marg, Garden of Five Senses Road, New Delhi - 110030</p>
+</div>
+<div>
+<span class="font-bold text-white uppercase block text-[11px] tracking-wider mb-0.5">Direct Engineering Lines</span>
+<p class="text-brand-300 font-semibold">+91 95552 02640 • +91 99539 87881</p>
+</div>
+<div>
+<span class="font-bold text-white uppercase block text-[11px] tracking-wider mb-0.5">Official Inquiries</span>
+<p class="">hello@crescentcare.in • asmedicalinfra@gmail.com</p>
+<p class="text-brand-400 font-mono text-[11px] mt-0.5">www.crescentcare.in</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Consultation Scheduler Form -->
+<div class="lg:col-span-7">
+<form action="#" class="bg-deep-950/90 border border-brand-500/30 p-6 sm:p-10 shadow-2xl space-y-5" data-purpose="contact-form" method="POST">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-wider text-brand-300 mb-1" for="first-name">First Name*</label>
+<input class="w-full bg-deep-900/90 border border-brand-500/30 text-white text-xs px-4 py-3 focus:outline-none focus:border-brand-400 placeholder:text-slate-500" id="first-name" name="first-name" placeholder="e.g. Rahul" required="" type="text">
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-wider text-brand-300 mb-1" for="last-name">Last Name*</label>
+<input class="w-full bg-deep-900/90 border border-brand-500/30 text-white text-xs px-4 py-3 focus:outline-none focus:border-brand-400 placeholder:text-slate-500" id="last-name" name="last-name" placeholder="e.g. Sharma" required="" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-wider text-brand-300 mb-1" for="mobile">Mobile Contact*</label>
+<input class="w-full bg-deep-900/90 border border-brand-500/30 text-white text-xs px-4 py-3 focus:outline-none focus:border-brand-400 placeholder:text-slate-500" id="mobile" name="mobile" placeholder="+91 98765 43210" required="" type="tel">
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-wider text-brand-300 mb-1" for="email">Institutional Email*</label>
+<input class="w-full bg-deep-900/90 border border-brand-500/30 text-white text-xs px-4 py-3 focus:outline-none focus:border-brand-400 placeholder:text-slate-500" id="email" name="email" placeholder="r.sharma@hospital.org" required="" type="email">
+</div>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-wider text-brand-300 mb-1" for="facility-type">Project Classification / Facility Size</label>
+<select class="w-full bg-deep-900/90 border border-brand-500/30 text-white text-xs px-4 py-3 focus:outline-none focus:border-brand-400" id="facility-type" name="facility-type">
+<option value="Modular Operating Theatre">Modular Operating Theatre Complex (OT)</option>
+<option value="Turnkey Hospital">Turnkey Hospital Civil Superstructure (50-200 Beds)</option>
+<option value="MGPS Pipeline">Medical Gas Pipeline System (MGPS / LMO)</option>
+<option value="Clinical HVAC">Clinical HVAC &amp; Laminar Airflow Solutions</option>
+<option value="Govt Medical College">Government / Institutional Medical College Tender</option>
+<option value="Other Infrastructure">Other Institutional Engineering</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-wider text-brand-300 mb-1" for="message">Message (Scope / Covered Area / Location)</label>
+<textarea class="w-full bg-deep-900/90 border border-brand-500/30 text-white text-xs px-4 py-3 focus:outline-none focus:border-brand-400 placeholder:text-slate-500" id="message" name="message" placeholder="Please outline target square meters, anticipated bed count, and location..." rows="3"></textarea>
+</div>
+<div class="pt-2">
+<button class="w-full py-4 bg-brand-500 hover:bg-brand-400 text-deep-950 font-bold text-xs uppercase tracking-super-wide transition-all duration-200 shadow-xl" type="submit">
+          Request Infrastructure Blueprint →
+        </button>
+<p class="text-[10px] text-brand-300/60 text-center mt-3">
+          All engineering specs and consultations are protected under mutual Non-Disclosure. Response within 24 business hours.
+        </p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ConsultationFormSection -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-deep-950 text-slate-400 border-t border-brand-500/20 py-12" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center pb-8 border-b border-brand-500/10">
+<h3 class="font-cinzel text-xl font-bold tracking-widest text-white uppercase mb-1">CRESCENT CARE • HEALTHCARE INFRASTRUCTURE</h3>
+<p class="text-[11px] uppercase tracking-wider text-brand-300">
+      M/s CrescentCare (AS Medical Infra Pvt Ltd) • Estd. 2014 • New Delhi
+    </p>
+</div>
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="hover:text-brand-300 transition-colors uppercase tracking-wider" href="#">Privacy Policy</a>
+<a class="hover:text-brand-300 transition-colors uppercase tracking-wider" href="#">Disclaimer</a>
+<a class="hover:text-brand-300 transition-colors uppercase tracking-wider" href="#">Unit Plan Specifications</a>
+<a class="hover:text-brand-300 transition-colors uppercase tracking-wider" href="#">Corporate Compliance</a>
+</div>
+<p class="uppercase tracking-wider text-center md:text-right">
+      © 2024 Crescent Care • AS Medical Infra Pvt Ltd. All Rights Reserved.
+    </p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+
+
+
+
+</body></html>
