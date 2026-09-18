@@ -16,6 +16,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico:regular" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Grand+Hotel:regular" rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
@@ -47,6 +49,8 @@
             integral: ['"Integral CF"', 'Integral', 'sans-serif'],
             georama: ['Georama', 'sans-serif'],
             kanit: ['Kanit', 'sans-serif'],
+            Pacifico: ['Pacifico', 'sans-serif'],
+            GrandHotel: ['Grand Hotel', 'sans-serif']
           },
           letterSpacing: {
             'ultra-wide': '0.22em',
@@ -112,6 +116,10 @@
       font-family: 'Kanit', sans-serif !important;
     }
 
+    .font-pacifico {
+      font-family: "Grand Hotel", sans-serif;
+    }
+
     .btn-tilted {
       display: inline-flex;
       align-items: center;
@@ -143,10 +151,8 @@
     <div class="w-full px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Brand Title -->
       <a class="flex items-center group" data-purpose="brand-link" href="#">
-        <span
-          class="font-bold text-xl sm:text-2xl tracking-wider text-white uppercase group-hover:text-amber-200 transition-colors drop-shadow-sm">
-          CRESCENT CARE
-        </span>
+        <img src="logo-white.png"
+          class="font-pacifico text-xl h-14 sm:text-2xl tracking-wider text-white group-hover:text-amber-200 transition-colors drop-shadow-sm" />
       </a>
       <!-- Desktop Navigation Menu -->
       <nav class="hidden lg:flex items-center space-x-8" data-purpose="desktop-nav">
@@ -157,6 +163,8 @@
           href="#philosophy-statement">Our Philosophy</a>
         <a class="text-xs  uppercase tracking-widest text-white font-light hover:text-white transition-colors"
           href="#matrix">Services</a>
+        <a class="text-xs  uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="tools-machinery.html">Tools &amp; Machinery</a>
         <a class="text-xs   uppercase tracking-widest text-white font-light hover:text-white transition-colors"
           href="#projects">Projects</a>
         <a class="text-xs  uppercase tracking-widest text-white font-light hover:text-white transition-colors"
@@ -198,6 +206,8 @@
           href="#matrix">Services</a>
         <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
           href="#specialized">Specialized Work</a>
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
+          href="tools-machinery.html">Tools &amp; Machinery</a>
         <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
           href="#projects">Projects</a>
         <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
@@ -257,10 +267,9 @@
           <!-- Left Column: Picture Box with Logo & Framed Quote Box -->
           <div class="lg:col-span-5 flex flex-col">
             <!-- Picture Box with Logo -->
-            <div class="w-full h-[460px] sm:h-[500px] lg:h-[540px] bg-black/10 rounded-sm flex items-center justify-center
+            <div class="w-full h-[460px] bg-white sm:h-[500px] lg:h-[540px] bg-black/10 rounded-sm flex items-center justify-center
               shadow-2xl p-8 text-center overflow-hidden border border-white/30">
-              <!-- <img src="logo.png" alt="Crescent Care"
-                class="max-h-full max-w-full object-contain filter drop-shadow-md"> -->
+              <img src="logo.jpeg" alt="Crescent Care" class="max-h-full max-w-full object-contain">
             </div>
             <!-- Framed Quote Box Matching Reference Image -->
             <div
@@ -941,6 +950,7 @@
         <div class="flex flex-wrap items-center justify-center gap-6">
           <a class="hover:text-white transition-colors" href="#about">About Us</a>
           <a class="hover:text-white transition-colors" href="#matrix">Services</a>
+          <a class="hover:text-white transition-colors" href="tools-machinery.html">Tools &amp; Machinery</a>
           <a class="hover:text-white transition-colors" href="#projects">Projects</a>
           <a class="hover:text-white transition-colors" href="#contact">Contact</a>
         </div>
