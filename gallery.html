@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Gallery | Crescent Care</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="logo.ico">
+  <link rel="shortcut icon" href="logo.ico">
+  <!-- Tailwind CSS v3 with Plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Google Fonts: Kanit (Body) & Georama (Headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#faf5f2',
+              100: '#f3e8e2',
+              200: '#e5d1c5',
+              300: '#d4b4a3',
+              400: '#b8866e',
+              500: '#a36d52',
+              600: '#915B42',
+              700: '#784a34',
+              800: '#623c2a',
+              900: '#4e3022',
+              950: '#2c1911'
+            },
+            deep: {
+              900: '#1a120d',
+              950: '#0e0906'
+            }
+          },
+          fontFamily: {
+            sans: ['Kanit', 'sans-serif'],
+            body: ['Kanit', 'sans-serif'],
+            heading: ['"Integral CF"', 'Integral', 'Georama', 'sans-serif'],
+            display: ['"Integral CF"', 'Integral', 'Georama', 'sans-serif'],
+            integral: ['"Integral CF"', 'Integral', 'sans-serif'],
+            georama: ['Georama', 'sans-serif'],
+            kanit: ['Kanit', 'sans-serif'],
+          },
+          letterSpacing: {
+            'ultra-wide': '0.22em',
+            'super-wide': '0.35em'
+          }
+        }
+      }
+    }
+  </script>
+  <style data-purpose="custom-typography">
+    @font-face {
+      font-family: 'Integral CF';
+      src: url('integral.ttf') format('truetype'),
+        url('./integral.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Integral';
+      src: url('integral.ttf') format('truetype'),
+        url('./integral.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'georama';
+      src: url('Georama.ttf') format('truetype'),
+        url('./Georama.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(75deg,
+          #986548 0%,
+          #d6a986 45%,
+          #b18a73 65%,
+          #725247 100%);
+
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .font-integral {
+      font-family: 'Integral CF', 'Integral', sans-serif !important;
+    }
+
+    .font-georama {
+      font-family: 'Georama', sans-serif !important;
+    }
+
+    .font-heading {
+      font-family: 'Integral CF', 'Integral', 'Georama', sans-serif !important;
+    }
+
+    .font-kanit {
+      font-family: 'Kanit', sans-serif !important;
+    }
+
+    .btn-tilted {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transform: skewX(-14deg);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-tilted>span,
+    .btn-tilted>div {
+      transform: skewX(14deg);
+      display: inline-block;
+    }
+
+    .btn-tilted:hover {
+      transform: skewX(-14deg) translateY(-2px);
+    }
+
+    .btn-tilted:active {
+      transform: skewX(-14deg) translateY(0);
+    }
+  </style>
+</head>
+
+<body
+  class="text-white font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white min-h-screen flex flex-col justify-between">
+  <!-- BEGIN: MainHeader -->
+  <header
+    class="sticky top-0 z-50 bg-brand-600 backdrop-blur-md border-b border-white/20 shadow-2xl shadow-brand-800 transition-all duration-300">
+    <div class="w-full px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Title -->
+      <a class="flex items-center group" data-purpose="brand-link" href="index.html">
+        <img src="logo-white.png" alt="Crescent Care"
+          class="font-pacifico text-xl h-14 sm:text-2xl tracking-wider text-white group-hover:text-amber-200 transition-colors drop-shadow-sm" />
+      </a>
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center space-x-8" data-purpose="desktop-nav">
+        <a class="text-xs uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="index.html">Home</a>
+        <a class="text-xs uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="index.html#about">About Us</a>
+        <a class="text-xs uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="index.html#philosophy-statement">Our Philosophy</a>
+        <a class="text-xs uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="index.html#matrix">Services</a>
+        <a class="text-xs uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="tools-machinery.html">Tools &amp; Machinery</a>
+        <a class="text-xs uppercase tracking-widest text-amber-200 font-semibold border-b-2 border-amber-200 py-1 transition-colors"
+          href="gallery.html">Gallery</a>
+        <a class="text-xs uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="index.html#projects">Projects</a>
+        <a class="text-xs uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="index.html#team">Team</a>
+        <a class="text-xs uppercase tracking-widest text-white font-light hover:text-white transition-colors"
+          href="index.html#contact">Contact Us</a>
+      </nav>
+      <!-- CTA & Mobile Menu Toggle -->
+      <div class="flex items-center gap-3">
+        <a class="btn-tilted px-4 hidden md:block sm:px-6 py-2 sm:py-2.5 bg-white hover:bg-[#3f2011] text-brand-600 font-semibold text-xs tracking-widest uppercase transition-all duration-300 shadow-md border border-white/30"
+          data-purpose="header-cta" href="index.html#contact">
+          <span>Enquiry Now</span>
+        </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button"
+          class="lg:hidden inline-flex items-center justify-center p-2 rounded-sm text-white hover:text-amber-200 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40 transition-colors"
+          aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden bg-brand-600/95 backdrop-blur-md border-t border-white/20 px-6 py-5 shadow-2xl transition-all duration-300">
+      <nav class="flex flex-col space-y-3" data-purpose="mobile-nav">
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
+          href="index.html">Home</a>
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
+          href="index.html#about">About Us</a>
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
+          href="index.html#philosophy-statement">Our Philosophy</a>
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
+          href="index.html#matrix">Services</a>
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
+          href="tools-machinery.html">Tools &amp; Machinery</a>
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-200 font-bold py-2 border-b border-white/10 transition-colors"
+          href="gallery.html">Gallery</a>
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
+          href="index.html#projects">Projects</a>
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 border-b border-white/10 transition-colors"
+          href="index.html#team">Team</a>
+        <a class="mobile-nav-link text-xs uppercase tracking-widest text-amber-50 hover:text-white font-medium py-2 transition-colors"
+          href="index.html#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <!-- END: MainHeader -->
+
+  <main class="flex-grow">
+    <!-- SECTION 1: Page Title Banner -->
+    <section class="relative py-14 sm:py-20 text-white overflow-hidden border-b border-white/20"
+      data-purpose="page-title">
+      <!-- Faded Background Overlay -->
+      <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <img alt="Skyline backdrop" class="w-full h-full object-cover object-center opacity-25 filter saturate-125"
+          src="image.png">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#8a563d]/85 via-[#74452e]/80 to-[#5d3623]/95"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1
+          class="font-georama text-3xl sm:text-5xl font-bold uppercase tracking-wide text-white leading-tight drop-shadow-md">
+          Gallery
+        </h1>
+        <div class="w-12 h-1 bg-white/60 mx-auto mt-3 mb-4"></div>
+        <!-- <p class="text-amber-100/90 text-sm sm:text-base max-w-2xl mx-auto font-light tracking-wide">
+          Explore our installations, high-performance architectural doors, specialized ceilings, and flooring solutions.
+        </p> -->
+      </div>
+    </section>
+
+    <!-- SECTION 2: Gallery Grid -->
+    <section class="py-12 sm:py-16 text-white relative" data-purpose="gallery-grid">
+      <div class="w-full mx-auto px-4 sm:px-30 lg:px-50">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+
+          <!-- 01: AUTOMATIC GLASS SLIDING DOORS -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/AUTOMATIC GLASS SLIDING DOORS.jpg', 'AUTOMATIC GLASS SLIDING DOORS')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/AUTOMATIC GLASS SLIDING DOORS.jpg" alt="AUTOMATIC GLASS SLIDING DOORS"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                AUTOMATIC GLASS SLIDING DOORS
+              </h3>
+            </div>
+          </div>
+
+          <!-- 02: BAFFLE ALUMINIUM CEILING -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/BAFFLE ALUMINIUM CEILING.jpg', 'BAFFLE ALUMINIUM CEILING')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/BAFFLE ALUMINIUM CEILING.jpg" alt="BAFFLE ALUMINIUM CEILING"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                BAFFLE ALUMINIUM CEILING
+              </h3>
+            </div>
+          </div>
+
+          <!-- 03: EPOXY TERRAZZO -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/EPOXY TERRAZZO.png', 'EPOXY TERRAZZO')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/EPOXY TERRAZZO.png" alt="EPOXY TERRAZZO"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                EPOXY TERRAZZO
+              </h3>
+            </div>
+          </div>
+
+          <!-- 04: FLUSH HOSPITAL DOORS -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/FLUSH HOSPITAL DOORS.jpg', 'FLUSH HOSPITAL DOORS')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/FLUSH HOSPITAL DOORS.jpg" alt="FLUSH HOSPITAL DOORS"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                FLUSH HOSPITAL DOORS
+              </h3>
+            </div>
+          </div>
+
+          <!-- 05: HERMETIC MEDICAL DOOR -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/HERMETIC MEDICAL DOOR.png', 'HERMETIC MEDICAL DOOR')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/HERMETIC MEDICAL DOOR.png" alt="HERMETIC MEDICAL DOOR"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                HERMETIC MEDICAL DOOR
+              </h3>
+            </div>
+          </div>
+
+          <!-- 06: HOMOGENEOUS SEAMLESS VINYL -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/HOMOGENEOUS SEAMLESS VINYL.jpg', 'HOMOGENEOUS SEAMLESS VINYL')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/HOMOGENEOUS SEAMLESS VINYL.jpg" alt="HOMOGENEOUS SEAMLESS VINYL"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                HOMOGENEOUS SEAMLESS VINYL
+              </h3>
+            </div>
+          </div>
+
+          <!-- 07: INDIRECT COVE LIGHTING -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/INDIRECT COVE LIGHTING.jpg', 'INDIRECT COVE LIGHTING')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/INDIRECT COVE LIGHTING.jpg" alt="INDIRECT COVE LIGHTING"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                INDIRECT COVE LIGHTING
+              </h3>
+            </div>
+          </div>
+
+          <!-- 08: INTEGRATED FLUTING -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/INTEGRATED FLUTING.jpg', 'INTEGRATED FLUTING')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/INTEGRATED FLUTING.jpg" alt="INTEGRATED FLUTING"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                INTEGRATED FLUTING
+              </h3>
+            </div>
+          </div>
+
+          <!-- 09: METAL CEILING PANELS -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/METAL CEILING PANELS.jpg', 'METAL CEILING PANELS')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/METAL CEILING PANELS.jpg" alt="METAL CEILING PANELS"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                METAL CEILING PANELS
+              </h3>
+            </div>
+          </div>
+
+          <!-- 10: OPEN GRID ALUMINIUM CEILING -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/OPEN GRID ALUMINIUM CEILING.jpg', 'OPEN GRID ALUMINIUM CEILING')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/OPEN GRID ALUMINIUM CEILING.jpg" alt="OPEN GRID ALUMINIUM CEILING"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                OPEN GRID ALUMINIUM CEILING
+              </h3>
+            </div>
+          </div>
+
+          <!-- 11: PADDED LEATHERETTE PANELLING -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/PADDED LEATHERETTE PANELLING.jpg', 'PADDED LEATHERETTE PANELLING')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/PADDED LEATHERETTE PANELLING.jpg" alt="PADDED LEATHERETTE PANELLING"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                PADDED LEATHERETTE PANELLING
+              </h3>
+            </div>
+          </div>
+
+          <!-- 12: PANEL ALUMUNIUM CEILING -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/PANEL ALUMUNIUM CEILING.jpg', 'PANEL ALUMINIUM CEILING')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/PANEL ALUMUNIUM CEILING.jpg" alt="PANEL ALUMINIUM CEILING"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                PANEL ALUMINIUM CEILING
+              </h3>
+            </div>
+          </div>
+
+          <!-- 13: STRIP ALUMINIUM CEILING -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/STRIP ALUMINIUM CEILING.jpg', 'STRIP ALUMINIUM CEILING')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/STRIP ALUMINIUM CEILING.jpg" alt="STRIP ALUMINIUM CEILING"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                STRIP ALUMINIUM CEILING
+              </h3>
+            </div>
+          </div>
+
+          <!-- 14: TERRAZZO -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/TERRAZZO.jpg', 'TERRAZZO')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/TERRAZZO.jpg" alt="TERRAZZO"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                TERRAZZO
+              </h3>
+            </div>
+          </div>
+
+          <!-- 15: U SHAPED ALUMINIUM CEILING -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/U SHAPED ALUMINIUM CEILING.jpg', 'U SHAPED ALUMINIUM CEILING')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/U SHAPED ALUMINIUM CEILING.jpg" alt="U SHAPED ALUMINIUM CEILING"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                U SHAPED ALUMINIUM CEILING
+              </h3>
+            </div>
+          </div>
+
+          <!-- 16: VINYL TILES -->
+          <div
+            class="gallery-card group bg-[#74452e]/45 hover:bg-[#88543a]/65 border border-white/20 hover:border-white/50 rounded-md overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm flex flex-col cursor-pointer"
+            onclick="openLightbox('gallery/VINYL TILES.jpg', 'VINYL TILES')">
+            <div class="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
+              <img src="gallery/VINYL TILES.jpg" alt="VINYL TILES"
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity">
+              </div>
+              <div
+                class="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-wider text-amber-200 border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                View Full
+              </div>
+            </div>
+            <div class="p-4 flex-grow flex items-center justify-between border-t border-white/10">
+              <h3
+                class="font-georama text-sm sm:text-base font-bold uppercase tracking-wide text-white group-hover:text-amber-200 transition-colors">
+                VINYL TILES
+              </h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Image Lightbox Modal -->
+  <div id="lightbox"
+    class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+    <div class="relative max-w-5xl max-h-[90vh] flex flex-col items-center">
+      <button id="lightbox-close"
+        class="absolute -top-12 right-0 sm:top-2 sm:-right-12 text-white hover:text-amber-200 bg-black/40 hover:bg-black/70 p-2 rounded-full transition-colors focus:outline-none"
+        onclick="closeLightbox()" aria-label="Close modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div
+        class="overflow-hidden rounded-lg border border-white/20 shadow-2xl bg-black/50 max-h-[80vh] flex items-center justify-center">
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[75vh] object-contain">
+      </div>
+      <p id="lightbox-caption"
+        class="mt-4 font-georama font-bold uppercase tracking-wider text-white text-base sm:text-lg text-center drop-shadow-md">
+      </p>
+    </div>
+  </div>
+
+  <!-- BEGIN: MainFooter -->
+  <footer class="relative bg-brand-900 border-t border-white/20 pt-12 pb-8 overflow-hidden" data-purpose="page-footer">
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <img alt="City skyline backdrop" class="w-full h-full object-cover object-bottom opacity-15 filter saturate-125"
+        src="image.png">
+      <div class="absolute inset-0 bg-[#5d3623]/85"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div
+        class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-amber-100/80 font-light">
+        <div class="flex flex-wrap items-center justify-center gap-6">
+          <a class="hover:text-white transition-colors" href="index.html#about">About Us</a>
+          <a class="hover:text-white transition-colors" href="index.html#matrix">Services</a>
+          <a class="hover:text-white transition-colors" href="tools-machinery.html">Tools &amp; Machinery</a>
+          <a class="hover:text-white transition-colors text-white font-medium" href="gallery.html">Gallery</a>
+          <a class="hover:text-white transition-colors" href="index.html#projects">Projects</a>
+          <a class="hover:text-white transition-colors" href="index.html#team">Team</a>
+          <a class="hover:text-white transition-colors" href="index.html#contact">Contact</a>
+        </div>
+        <p class="text-center md:text-right text-amber-100/70">
+          © 2026 Crescent Care. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- END: MainFooter -->
+
+  <!-- Scripts -->
+  <script>
+    // Lightbox handling
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxImg.alt = caption;
+      lightboxCaption.textContent = caption;
+      lightbox.classList.remove('hidden');
+      setTimeout(() => {
+        lightbox.classList.remove('opacity-0');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('opacity-0');
+      setTimeout(() => {
+        lightbox.classList.add('hidden');
+        lightboxImg.src = '';
+        lightboxCaption.textContent = '';
+      }, 300);
+      document.body.style.overflow = '';
+    }
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target.classList.contains('fixed')) {
+        closeLightbox();
+      }
+    });
+
+    // Mobile Menu Script
+    (function () {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (!mobileMenuBtn || !mobileMenu) return;
+
+      function toggleMenu() {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+
+      function openMenu() {
+        mobileMenu.classList.remove('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
+        if (closeIcon) closeIcon.classList.remove('hidden');
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+        if (closeIcon) closeIcon.classList.add('hidden');
+      }
+
+      mobileMenuBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      // Close menu when clicking on any navigation link
+      document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          closeMenu();
+        });
+      });
+
+      // Close when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          closeMenu();
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeMenu();
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
